@@ -1,4 +1,4 @@
-# Добро пожаловать на сайт проекта ccl-project и FSC
+# Добро пожаловать на сайт проекта ccl-project и fsc
 
 ## Проект на github.com
 - [fsc](https://github.com/Vaskozlov/fsc)
