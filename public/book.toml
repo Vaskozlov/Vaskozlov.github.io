@@ -1,0 +1,9 @@
+[book]
+authors = ["vaskozlov3940@gmail.com"]
+language = "ru"
+multilingual = false
+src = "src"
+
+[output.html.playground]
+editable = true
+runnable = true

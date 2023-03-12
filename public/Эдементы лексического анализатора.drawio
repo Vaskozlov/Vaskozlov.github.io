@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net" modified="2023-02-07T13:18:22.802Z" agent="5.0 (Macintosh)" etag="UKz5KNMAf7ZyJsWp5R0j" version="20.8.16" type="github">
+  <diagram name="Страница 1" id="Qqd4-LqKWCvmbCdJvOT6">
+    <mxGraphModel dx="1698" dy="1053" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MzSF2dZ1gkTMf4Y2oNeN-20" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="25" y="30" width="1125" height="540" as="geometry" />
+        </mxCell>
+        <mxCell id="MzSF2dZ1gkTMf4Y2oNeN-15" value="Базовый элемент правила" style="rounded=0;whiteSpace=wrap;html=1;fontSize=27;strokeWidth=3;" parent="MzSF2dZ1gkTMf4Y2oNeN-20" vertex="1">
+          <mxGeometry x="441.9642857142858" width="241.07142857142858" height="170.52631578947367" as="geometry" />
+        </mxCell>
+        <mxCell id="MzSF2dZ1gkTMf4Y2oNeN-16" value="Контейнер правил" style="whiteSpace=wrap;html=1;rounded=0;fontSize=27;strokeWidth=3;" parent="MzSF2dZ1gkTMf4Y2oNeN-20" vertex="1">
+          <mxGeometry x="-10" y="369.4736842105263" width="241.07142857142858" height="170.52631578947367" as="geometry" />
+        </mxCell>
+        <mxCell id="MzSF2dZ1gkTMf4Y2oNeN-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;" parent="MzSF2dZ1gkTMf4Y2oNeN-20" source="MzSF2dZ1gkTMf4Y2oNeN-15" target="MzSF2dZ1gkTMf4Y2oNeN-16" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MzSF2dZ1gkTMf4Y2oNeN-17" value="Множество символов" style="whiteSpace=wrap;html=1;rounded=0;fontSize=27;strokeWidth=3;" parent="MzSF2dZ1gkTMf4Y2oNeN-20" vertex="1">
+          <mxGeometry x="289.99928571428575" y="369.4736842105263" width="241.07142857142858" height="170.52631578947367" as="geometry" />
+        </mxCell>
+        <mxCell id="MzSF2dZ1gkTMf4Y2oNeN-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="MzSF2dZ1gkTMf4Y2oNeN-20" source="MzSF2dZ1gkTMf4Y2oNeN-15" target="MzSF2dZ1gkTMf4Y2oNeN-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MzSF2dZ1gkTMf4Y2oNeN-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;" parent="MzSF2dZ1gkTMf4Y2oNeN-20" source="MzSF2dZ1gkTMf4Y2oNeN-15" target="MzSF2dZ1gkTMf4Y2oNeN-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MzSF2dZ1gkTMf4Y2oNeN-18" value="Строчка" style="whiteSpace=wrap;html=1;rounded=0;fontSize=27;strokeWidth=3;" parent="MzSF2dZ1gkTMf4Y2oNeN-20" vertex="1">
+          <mxGeometry x="590.625" y="369.4736842105263" width="241.07142857142858" height="170.52631578947367" as="geometry" />
+        </mxCell>
+        <mxCell id="MzSF2dZ1gkTMf4Y2oNeN-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;" parent="MzSF2dZ1gkTMf4Y2oNeN-20" source="MzSF2dZ1gkTMf4Y2oNeN-15" target="MzSF2dZ1gkTMf4Y2oNeN-18" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MzSF2dZ1gkTMf4Y2oNeN-19" value="Логический элемент" style="whiteSpace=wrap;html=1;rounded=0;fontSize=27;strokeWidth=3;" parent="MzSF2dZ1gkTMf4Y2oNeN-20" vertex="1">
+          <mxGeometry x="887.9985714285716" y="369.4736842105263" width="241.07142857142858" height="170.52631578947367" as="geometry" />
+        </mxCell>
+        <mxCell id="MzSF2dZ1gkTMf4Y2oNeN-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;" parent="MzSF2dZ1gkTMf4Y2oNeN-20" source="MzSF2dZ1gkTMf4Y2oNeN-15" target="MzSF2dZ1gkTMf4Y2oNeN-19" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

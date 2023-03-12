@@ -1,0 +1,28 @@
+<mxfile host="app.diagrams.net" modified="2023-02-07T13:18:19.346Z" agent="5.0 (Macintosh)" etag="S7qbPqoMDPKLbxW5uRnK" version="20.8.16" type="github">
+  <diagram name="Страница 1" id="DJKRvqePPZWP8c5DOFiD">
+    <mxGraphModel dx="1698" dy="1053" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="GDZhjeSM9BzOyRlU0AhW-6" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="30" y="20" width="1130" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="GDZhjeSM9BzOyRlU0AhW-2" value="Лексический анализатор" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=4;fontSize=34;" parent="GDZhjeSM9BzOyRlU0AhW-6" vertex="1">
+          <mxGeometry x="662.4137931034483" width="467.58620689655174" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="GDZhjeSM9BzOyRlU0AhW-3" value="Генератор лексем" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=4;fontSize=34;" parent="GDZhjeSM9BzOyRlU0AhW-6" vertex="1">
+          <mxGeometry x="331.2037931034482" y="275" width="467.58620689655174" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="GDZhjeSM9BzOyRlU0AhW-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=4;" parent="GDZhjeSM9BzOyRlU0AhW-6" source="GDZhjeSM9BzOyRlU0AhW-2" target="GDZhjeSM9BzOyRlU0AhW-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Flp7Z_eWGdXcE0ARH0qL-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=4;" parent="GDZhjeSM9BzOyRlU0AhW-6" source="GDZhjeSM9BzOyRlU0AhW-5" target="GDZhjeSM9BzOyRlU0AhW-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GDZhjeSM9BzOyRlU0AhW-5" value="Генератор символом" style="whiteSpace=wrap;html=1;rounded=0;strokeWidth=4;fontSize=34;" parent="GDZhjeSM9BzOyRlU0AhW-6" vertex="1">
+          <mxGeometry x="-9" width="467.58620689655174" height="165" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
