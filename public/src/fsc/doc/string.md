@@ -2,16 +2,26 @@
 
 ## Объявление
 
-Строчка создается при помощи " и может содержать в себе символы юникода: <br />
+Строка имеет имя <code class="language-Swift">String\<T\></code> и содержит символы [UTF-8](https://ru.wikipedia.org/wiki/UTF-8).
+
+
+Строку может задать при помощи символов, заключенных между " или явным конструированием типа: <br />
 <code class="language-Swift">"Hello, World!"</code> <br />
-<code class="language-Swift">"\u0xDADA"</code>
+<code class="language-Swift">String("\u0xDADA")</code>
 
 
 ## Методы
 
-- <code class="language-Swift">size()</code> - возвращает длину строки
-- <code class="language-Swift">toI32()</code> - конвертирует строку в i32
-- <code class="language-Swift">toI64()</code> - конвертирует строку в i64
-- <code class="language-Swift">toU64()</code> - конвертирует строку в u64
-- <code class="language-Swift">toF32()</code> - конвертирует строку в f32
-- <code class="language-Swift">toF64()</code> - конвертирует строку в f64
+- <code class="language-Swift">size() -> u64</code> - возвращает длину строки
+- <code class="language-Swift">toI32() -> i32</code> - конвертирует строку в i32
+- <code class="language-Swift">toI64() -> i64</code> - конвертирует строку в i64
+- <code class="language-Swift">toU64() -> u64</code> - конвертирует строку в u64
+- <code class="language-Swift">toF32() -> f32</code> - конвертирует строку в f32
+- <code class="language-Swift">toF64() -> f64</code> - конвертирует строку в f64
+- <code class="language-Swift">at(in u64 index) -> char</code> - возвращает символ по заданному индексу
+
+## Перезагруженные операторы
+
+- <code class="language-Swift">\_\_at\_\_(in u64 index) -> char</code> - поведение аналогично методы at
+- <code class="language-Swift">\_\_add\_\_(in String lhs, in String rhs) -> String</code> - поведение аналогично методы at
+- <code class="language-Swift">\_\_mul\_\_(in String str, in u64 times) -> String</code> - повторяет строку заданное число раз
