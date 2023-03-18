@@ -11,4 +11,11 @@
 - <code class="language-Swift">floor(in float x) -> float</code> - ближайшее целое число не больше заданного значения 
 - <code class="language-Swift">ceil(in float x) -> float</code> - ближайшее целое число не меньшее заданного значения 
 - <code class="language-Swift">round(in float x) -> float</code> - ближайшее целое число, округление от нуля в промежуточных случаях
-- <code class="language-Swift">abs(in any_numeric x) -> float</code> - вычисляет абсолютное значение целого числа (|x|) 
+- <code class="language-Swift">abs(in any_numeric x) -> float</code> - вычисляет абсолютное значение целого числа
+- <code class="language-Swift">sin(in float x) -> float</code> - вычисляет синус
+- <code class="language-Swift">cos(in float x) -> float</code> - вычисляет косинус
+- <code class="language-Swift">tan(in float x) -> float</code> - вычисляет тангенс
+- <code class="language-Swift">asin(in float x) -> float</code> - вычисляет арксинус
+- <code class="language-Swift">acos(in any_numeric x) -> float</code> - вычисляет арккосинус 
+- <code class="language-Swift">atan(in any_numeric x) -> float</code> - вычисляет арктангенс
+- <code class="language-Swift">atan2(in any_numeric y, in any_numeric x) -> float</code> - арктангенс, используя знаки для определения квадрантов
