@@ -13,8 +13,9 @@
     - [Выражения](fsc/doc/expression.md)
     - [Функции](fsc/doc/function.md)
       - [Шаблонные функции](fsc/doc/templated_functions.md) 
-      - [Математические вычисления](fsc/doc/math.md)
+    - [Классы](fsc/doc/class.md)
+    - [Встроенные функции](fsc/doc/builtin_functions.md)
       - [Ввод](fsc/doc/input.md)
       - [Вывод](fsc/doc/output.md)
-    - [Классы](fsc/doc/class.md)
+      - [Общие математические функции](fsc/doc/math.md)
     

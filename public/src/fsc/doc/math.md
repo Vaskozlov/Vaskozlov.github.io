@@ -1,14 +1,14 @@
-# Математические функции
+# Общие математические функции
 
 В fsc есть ряд встроенные функций для выполнения математических операций и все они могут быть исполнены во время сборки.
 
-- <code class="language-Swift">sqrt(in any_float x) -> any_float</code> - квадратный корень
-- <code class="language-Swift">log2(in any_float x) -> any_float</code> - логарифм по основанию 2
-- <code class="language-Swift">log10(in any_float x) -> any_float</code> - логарифм по основанию 10
-- <code class="language-Swift">log(in any_float x) -> any_float</code> - натуральный логарифм
-- <code class="language-Swift">log(in any_float x, in any_float base) -> any_float</code> - логарифм по заданному основанию
-- <code class="language-Swift">trunc(in any_float x) -> any_float</code> - целая часть числа
-- <code class="language-Swift">floor(in any_float x) -> any_float</code> - округление числа в меньшую сторону
-- <code class="language-Swift">ceil(in any_float x) -> any_float</code> - округление числа в большую сторону
-- <code class="language-Swift">round(in any_float x) -> any_float</code> - округление числа
-- <code class="language-Swift">abs(in any_numeric x) -> any_float</code> - абсолютное значение
+- <code class="language-Swift">sqrt(in float x) -> float</code> - вычисляет квадратный корень
+- <code class="language-Swift">log2(in float x) -> float</code> - логарифм по основанию 2 данного числа
+- <code class="language-Swift">log10(in float x) -> float</code> - логарифм по основанию 10 данного числа
+- <code class="language-Swift">log(in float x) -> float</code> - вычисляет натуральный логарифм
+- <code class="language-Swift">log(in float x, in float base) -> float</code> - логарифм данного числа по данному основанию
+- <code class="language-Swift">trunc(in float x) -> float</code> - ближайшее целое число, не превышающее по величине заданное значение 
+- <code class="language-Swift">floor(in float x) -> float</code> - ближайшее целое число не больше заданного значения 
+- <code class="language-Swift">ceil(in float x) -> float</code> - ближайшее целое число не меньшее заданного значения 
+- <code class="language-Swift">round(in float x) -> float</code> - ближайшее целое число, округление от нуля в промежуточных случаях
+- <code class="language-Swift">abs(in any_numeric x) -> float</code> - вычисляет абсолютное значение целого числа (|x|) 
