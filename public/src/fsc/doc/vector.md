@@ -1,9 +1,6 @@
 # Динамический массив: Vector\<T\>
 
 ## Объявление
-
-Динамический массив имеет имя <code class="language-Swift">Vector\<T\></code>.
-
  - <code class="language-Swift">Vector\<T\>()</code>
  - <code class="language-Swift">Vector\<T\>(T, T...)</code>
 

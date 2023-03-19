@@ -1,4 +1,4 @@
-# Строчка FSC
+#Строчка FSC
 
 ## Объявление
 
@@ -13,12 +13,16 @@
 ## Методы
 
 - <code class="language-Swift">size() -> u64</code> - возвращает количество символов 
-- <code class="language-Swift">toI32() -> i32</code> - преобразует строку в целое число i32
-- <code class="language-Swift">toI64() -> i64</code> - преобразует строку в целое число i64
-- <code class="language-Swift">toU64() -> u64</code> - преобразует строку в целое число u64
-- <code class="language-Swift">toF32() -> f32</code> - преобразует строку значение с плавающей запятой число f32
-- <code class="language-Swift">toF64() -> f64</code> - преобразует строку значение с плавающей запятой число f64
 - <code class="language-Swift">at(in u64 index) -> char</code> - обращается к указанному символу с проверкой границ 
+
+### Преобразование в целочисленное число
+- <code class="language-Swift">toI32() -> i32</code> 
+- <code class="language-Swift">toI64() -> i64</code>
+- <code class="language-Swift">toU64() -> u64</code>
+ 
+### Преобразование в число с плавающей запятой
+- <code class="language-Swift">toF32() -> f32</code>
+- <code class="language-Swift">toF64() -> f64</code>
 
 ## Перезагруженные операторы
 
