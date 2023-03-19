@@ -6,7 +6,7 @@
 
 
 Строку может задать при помощи символов, заключенных между " или явным конструированием типа: <br />
-- <code class="language-Swift">"Hello, World!"</code> <br />
+- <code class="language-Swift">"Hello, World!"</code>
 - <code class="language-Swift">String("\u0xDADA")</code>
 
 

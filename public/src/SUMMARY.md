@@ -18,4 +18,7 @@
       - [Ввод](fsc/doc/input.md)
       - [Вывод](fsc/doc/output.md)
       - [Общие математические функции](fsc/doc/math.md)
-    
+    - [Примеры](fsc/examples/examples.md)
+      - [Квадратный корень](fsc/examples/sqrt.md)
+      - [Последовательность Фибоначчи](fsc/examples/fibonacci.md)
+      - [Сортировка пузырьком](fsc/examples/bubble_sort.md)
