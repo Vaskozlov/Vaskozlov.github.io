@@ -2,7 +2,7 @@
 
 ## Объявление
 
-Строка имеет имя <code class="language-Swift">String\<T\></code> и содержит символы [UTF-8](https://ru.wikipedia.org/wiki/UTF-8).
+Строка имеет имя <code class="language-Swift">String</code> и содержит символы [UTF-8](https://ru.wikipedia.org/wiki/UTF-8).
 
 
 Строку может задать при помощи символов, заключенных между " или явным конструированием типа: <br />
