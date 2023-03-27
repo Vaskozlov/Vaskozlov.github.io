@@ -13,6 +13,8 @@
     - [Динамический массив](fsc/doc/vector.md)
   - [Выражения](fsc/doc/expression.md)
   - [Функции](fsc/doc/function.md)
+  - [Оператор if-elif-else](fsc/doc/if.md)
+  - [Оператор while](fsc/doc/while.md)
   - [Классы](fsc/doc/class.md)
   - [Шаблоны](fsc/doc/templates.md)
   - [Встроенные функции](fsc/doc/builtin_functions.md)
