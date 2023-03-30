@@ -4,7 +4,12 @@
 
 - [CCL](ccl/ccl.md)
   - [Генератор символов](ccl/text_iterator.md)
-
+  - [Правило лексического анализатора](ccl/rule.md)
+    - [Множество символов](ccl/union.md)
+    - [Строчка](ccl/sequence.md)
+    - [Логический элемент](ccl/logical.md)
+    - [Контейнер](ccl/crate.md)
+    - [Примеры](ccl/examples.md)
 - [FSC](fsc/fsc.md)
   - [Структура программы](fsc/doc/programs_structure.md)
   - [Объявление переменных](fsc/doc/variable.md)
