@@ -1,0 +1,756 @@
+<!DOCTYPE HTML>
+<html lang="ru" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title></title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="HomePage.html">Главная</a></li><li class="chapter-item expanded "><a href="ccl/ccl.html"><strong aria-hidden="true">1.</strong> CCL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ccl/text_iterator.html"><strong aria-hidden="true">1.1.</strong> Генератор символов</a></li><li class="chapter-item expanded "><a href="ccl/rule.html"><strong aria-hidden="true">1.2.</strong> Правило лексического анализатора</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ccl/union.html"><strong aria-hidden="true">1.2.1.</strong> Множество символов</a></li><li class="chapter-item expanded "><a href="ccl/sequence.html"><strong aria-hidden="true">1.2.2.</strong> Строчка</a></li><li class="chapter-item expanded "><a href="ccl/logical.html"><strong aria-hidden="true">1.2.3.</strong> Логический элемент</a></li><li class="chapter-item expanded "><a href="ccl/crate.html"><strong aria-hidden="true">1.2.4.</strong> Контейнер</a></li><li class="chapter-item expanded "><a href="ccl/examples.html"><strong aria-hidden="true">1.2.5.</strong> Примеры</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="fsc/fsc.html"><strong aria-hidden="true">2.</strong> FSC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="fsc/doc/programs_structure.html"><strong aria-hidden="true">2.1.</strong> Структура программы</a></li><li class="chapter-item expanded "><a href="fsc/doc/variable.html"><strong aria-hidden="true">2.2.</strong> Объявление переменных</a></li><li class="chapter-item expanded "><a href="fsc/doc/data_types.html"><strong aria-hidden="true">2.3.</strong> Типы данных</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="fsc/doc/string.html"><strong aria-hidden="true">2.3.1.</strong> Строка</a></li><li class="chapter-item expanded "><a href="fsc/doc/vector.html"><strong aria-hidden="true">2.3.2.</strong> Динамический массив</a></li></ol></li><li class="chapter-item expanded "><a href="fsc/doc/expression.html"><strong aria-hidden="true">2.4.</strong> Выражения</a></li><li class="chapter-item expanded "><a href="fsc/doc/function.html"><strong aria-hidden="true">2.5.</strong> Функции</a></li><li class="chapter-item expanded "><a href="fsc/doc/if.html"><strong aria-hidden="true">2.6.</strong> Оператор if-elif-else</a></li><li class="chapter-item expanded "><a href="fsc/doc/while.html"><strong aria-hidden="true">2.7.</strong> Оператор while</a></li><li class="chapter-item expanded "><a href="fsc/doc/class.html"><strong aria-hidden="true">2.8.</strong> Классы</a></li><li class="chapter-item expanded "><a href="fsc/doc/templates.html"><strong aria-hidden="true">2.9.</strong> Шаблоны</a></li><li class="chapter-item expanded "><a href="fsc/doc/builtin_functions.html"><strong aria-hidden="true">2.10.</strong> Встроенные функции</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="fsc/doc/input.html"><strong aria-hidden="true">2.10.1.</strong> Ввод</a></li><li class="chapter-item expanded "><a href="fsc/doc/output.html"><strong aria-hidden="true">2.10.2.</strong> Вывод</a></li><li class="chapter-item expanded "><a href="fsc/doc/math.html"><strong aria-hidden="true">2.10.3.</strong> Общие математические функции</a></li></ol></li><li class="chapter-item expanded "><a href="fsc/examples/examples.html"><strong aria-hidden="true">2.11.</strong> Примеры</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="fsc/examples/sqrt.html"><strong aria-hidden="true">2.11.1.</strong> Квадратный корень</a></li><li class="chapter-item expanded "><a href="fsc/examples/fibonacci.html"><strong aria-hidden="true">2.11.2.</strong> Последовательность Фибоначчи</a></li><li class="chapter-item expanded "><a href="fsc/examples/bubble_sort.html"><strong aria-hidden="true">2.11.3.</strong> Сортировка пузырьком</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="Добро-пожаловать-на-сайт-проекта-ccl-project-и-fsc"><a class="header" href="#Добро-пожаловать-на-сайт-проекта-ccl-project-и-fsc">Добро пожаловать на сайт проекта ccl-project и fsc</a></h1>
+<h2 id="Проект-на-githubcom"><a class="header" href="#Проект-на-githubcom">Проект на github.com</a></h2>
+<ul>
+<li><a href="https://github.com/Vaskozlov/fsc">fsc</a></li>
+<li><a href="https://github.com/Vaskozlov/ccl-project">ccl-project</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Библиотека-конструирования-компилятора-ccl"><a class="header" href="#Библиотека-конструирования-компилятора-ccl">Библиотека конструирования компилятора ccl</a></h1>
+<p>Возможности библиотеки:</p>
+<ul>
+<li>Генератор символов</li>
+<li>Лексический анализатор</li>
+<li>Помощник в генерации кода</li>
+<li>Другие возможности для упрощения создания компилятора</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Генератор-символов"><a class="header" href="#Генератор-символов">Генератор символов</a></h1>
+<p>Генератор символов выполняет следующие задачи:</p>
+<ul>
+<li>Преобразование UTF-8 в UTF-32</li>
+<li>Отслеживание позиции в файле</li>
+<li>Подсчет количество пробелов и символов табуляции перед токеном</li>
+<li>Предоставление информации для исключений</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Правило-для-лексического-анализатора"><a class="header" href="#Правило-для-лексического-анализатора">Правило для лексического анализатора</a></h1>
+<p>Модификаторы правила:</p>
+<ul>
+<li>! - элемент может стоять в любом месте (рекомендуется применять к терминальным символам грамматики)</li>
+</ul>
+<p>Правило состоит из 4 основных элементов:</p>
+<ul>
+<li><a href="ccl/union.html">множества символов</a></li>
+<li><a href="ccl/sequence.html">строчки</a></li>
+<li><a href="ccl/logical.html">логического элемента</a></li>
+<li><a href="ccl/crate.html">контейнера правил</a></li>
+</ul>
+<p>К каждому правилу могут быть применены следующие постфиксальные модификаторы:</p>
+<ul>
+<li>p - элемент является префиксом/постфиксом (изначально создается префикс, но если уже существует элемент, который не является префиксным, то создается постфикс)</li>
+<li>^ - все, кроме данного элемента</li>
+<li>{n, m} - элемент повторяется от n до m раз включительно</li>
+<li>* - повторяется ноль раз или больше</li>
+<li>+ - повторяется больше нулю раз</li>
+<li>? - повторяется 0 или 1 раз</li>
+</ul>
+<p>Примеры правил можно найти <a href="ccl/examples.html">тут</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Множество-символов"><a class="header" href="#Множество-символов">Множество символов</a></h1>
+<p>Множество символов задается скобками [ и ].
+Внутри множества прописываются символы, которы в него входят.
+Для задания последовательности символом используется -.
+К примеру, множество <code>[a-z]</code> будет включать в себя все символы от a до z.
+Если необходимо включить в правило -, [ или другой специальный символ, то необходимо поставить \ перед символов.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Строка"><a class="header" href="#Строка">Строка</a></h1>
+<p>Строка - упорядоченное множество из n символов.
+Строка задается символами, заключенными между &quot;.
+Если необходимо включить специальный символ, то ставится \ перед ним.</p>
+<pre><code>&quot;some \&quot;string\&quot;...&quot;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Логический-элемент"><a class="header" href="#Логический-элемент">Логический элемент</a></h1>
+<p>Логический элемент создается при помощи операторов | и &amp;.</p>
+<ul>
+<li>| - или первый или второй элемент</li>
+<li>&amp; - первый и второй элемент (при анализе будет учитываться только длина первого)</li>
+</ul>
+<pre><code>[a-z] | [0-9]
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Контейнер-правил"><a class="header" href="#Контейнер-правил">Контейнер правил</a></h1>
+<p>Контейнер правил может содержать в себе другие элементы правила (включая другие контейнеры).
+Контейнер создается при помощи ( и ).</p>
+<pre><code>([a-z] [0-9])
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Примеры-правил"><a class="header" href="#Примеры-правил">Примеры правил</a></h1>
+<ul>
+<li><code>! [+]</code> - знак сложения, который может находиться где угодно</li>
+<li><code>[0-9]+ ( [a-zA-Z_] [a-zA-Z0-9_]* )?p</code> - последовательность цифр, за которой следует опциональный постфикс в виде идентификатора</li>
+<li><code>! &quot;\&quot;&quot; ([&quot;\n]^ | &quot;\\\&quot;&quot;)* &quot;\&quot;&quot;</code> - элемент, который заключен между &quot; и может находиться в любом месте; внутри него находятся либо символы, кроме &quot; и символа новой строки, либо \&quot; (стандартная строчка в языке программирования)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Компилятор-fsc"><a class="header" href="#Компилятор-fsc">Компилятор FSC</a></h1>
+<h2 id="Актуальность-компилятора-fsc"><a class="header" href="#Актуальность-компилятора-fsc">Актуальность компилятора FSC</a></h2>
+<p>В мире существует множество языков программирования, большинство из которых можно поделить на две группы: компилируемые и интерпретируемые. Компилируемые языки обладают высокой производительностью, позволяют взаимодействовать с операционной системой и внешними устройствами. Интерпретируемые обладают платформенной независимостью, представляют информативные ошибки, упрощают процесс разработки, но их производительность существенно ниже.</p>
+<p>На сегодняшний день многим начинающим разработчикам сложно перейти с простого языка, как Python, на C++, поэтому необходим промежуточный язык программирования, который помогал бы им в этом.</p>
+<p>Цель работы - создать язык программирования, который был бы удобнее С++ и производительнее любого интерпретируемого языка, и компилятор к нему.</p>
+<p>Для выполнения поставленной цели были определены следующие задачи:
+1. Изучить преимущества и недостатки различных языков программирования
+2. Разработать концепцию и синтаксис языка программирования
+3. Разработать компилятор к языку программирования </p>
+<p>Придумывать «еще одну замену C++» - нецелесообразно: программист должен писать «что он хочет сделать, а не как». Необходим высокоуровневый язык программирования, который сумел бы заменить интерпретируемые языки в некоторых случаях использования и отвечал бы всем современным требованиям: имел простой синтаксис, обеспечивал высокую безопасность при работе с памятью и несколькими потоками.</p>
+<p>Самым главным в языке программирования является его синтаксис, потому что это способ выражения идей в программном коде. Простой синтаксис позволяет программисту быть эффективнее других разработчиков, сопоставимых по уровню, что уменьшает расходы и ускоряет выход продукта на рынок. Именно это преимущество стало основной причиной популярности интерпретируемых языков.</p>
+<p>Не менее актуальным для языка программирования является его «безопасность». Без стабильности и безопасности производительность не имеет смысла, потому что самое главное в программе - корректность исполнения. Наиболее важным является безопасность при работе с памятью, так как большинство современных дефектов вызваны уязвимостями в ней.</p>
+<p>Многопоточные программы становятся всё более актуальными, так как с каждым годом количество ядер в серверных и потребительских процессорах увеличивается. Увеличение количества потоков у программы может существенно повысить производительность, поэтому главным критерием оптимизации в современных системах является возможность работы с несколькими потоками. Этим преимуществом пользоваться трудно, потому что разработчику необходимо следить за тем, чтобы не вызвать «гонок за данными», взаимных блокировок правильно синхронизировать потоки между собой.</p>
+<p>Синтаксис языка будет С-подобным, потому что это определенный стандарт в отрасли, от которого не хочется отходить, так как разработчики уже успели к нему привыкнуть. Часть конструкций будет взята из С++, но упрощены за счет компилятора. Потенциально небезопасные конструкции будут полностью исключены из языка.</p>
+<p>Главным концептуальным решением является отказ от заголовочных файлов и файлов ресурсов, так как они ограничивают средство разработки, создавая следующие проблемы:
+• Низкий уровень глобальной оптимизации
+• Невозможность компилятора отследить весь код во время сборки для полного его анализа
+• Необходимость пересобирать проект, при изменении одного заголовочного файла</p>
+<p>Еще одним решением является почти полный отказ от атрибутов. Компилятор, обладая возможность полностью отслеживать код во время сборки, сможет расставлять атрибуты автоматически. Это решение позволит упростить язык и повысить независимость оптимизации от программиста.</p>
+<p>Результатом работы будет являться язык программирования и компилятор к нему. Язык программирования будет сочетать в себе преимущества компилируемых и интерпретируемых языков, благодаря чему сможет найти применения в программировании различных мобильных устройств, устройств из мира интернет вещей, высокопроизводительных программ,  а также в обучении молодых специалистов.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Структура-программы-на-языке-fsc"><a class="header" href="#Структура-программы-на-языке-fsc">Структура программы на языке FSC</a></h1>
+<p>Программа может состоять из <a href="fsc/doc/function.html">функций</a>, <a href="fsc/doc/class.html">классов</a> и <a href="fsc/doc/variable.html">глобальных переменных</a>.<br />
+По умолчанию выполнение начинается с функции main.</p>
+<p>Пример программы:</p>
+<pre><code class="language-Swift">class S
+{
+    public var someVariable : i32
+
+    public func __init__()
+    {
+        someVariable = 42
+    }
+}
+
+var foo = S().someVariable
+
+func main()
+{
+    print(&quot;{}\n&quot;, foo)
+    return 0
+}
+</code></pre>
+<pre><code>&gt; 42
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Переменные-в-fsc"><a class="header" href="#Переменные-в-fsc">Переменные в FSC</a></h1>
+<p>Для объявления переменной и константы используются ключевые слова <code class="language-Swift">var</code>
+и <code class="language-Swift">let</code> соотвественно.</p>
+<p>При объявлении переменных в fsc необязательно явно указывать ее тип.</p>
+<pre><code class="language-swift">var foo = 10
+var foo2: i32 = 20
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Типы-данных-в-fsc"><a class="header" href="#Типы-данных-в-fsc">Типы данных в FSC</a></h1>
+<p>В FSC по умолчанию поддерживаются следующие типы данных</p>
+<ul>
+<li>i32 - целочисленное знаковое число размером 32 бита</li>
+<li>i64 - целочисленное знаковое число размером 64 бита</li>
+<li>u32 - целочисленное беззнаковое число размером 32 бита</li>
+<li>u64 - целочисленное беззнаковое число размером 64 бита</li>
+<li>f32 - дробное число размером 32 бита</li>
+<li>f64 - дробное число размером 64 бита</li>
+<li>bool - логическое значение </li>
+<li>char - символ</li>
+<li><a href="fsc/doc/string.html">String</a> - строка</li>
+<li><a href="fsc/doc/vector.html">Vector&lt;T&gt;</a> - динамический массив</li>
+</ul>
+<p>Для объявления пользовательского типа данных смотри <a href="fsc/doc/class.html">классы</a></p>
+<div style="break-before: page; page-break-before: always;"></div><p>#Строчка FSC</p>
+<h2 id="Объявление"><a class="header" href="#Объявление">Объявление</a></h2>
+<p>Строка имеет имя <code class="language-Swift">String</code> и содержит символы <a href="https://ru.wikipedia.org/wiki/UTF-8">UTF-8</a>.</p>
+<p>Строку может задать при помощи символов, заключенных между &quot; или явным конструированием типа: <br /></p>
+<ul>
+<li><code class="language-Swift">&quot;Hello, World!&quot;</code></li>
+<li><code class="language-Swift">String(&quot;\u0xDADA&quot;)</code></li>
+</ul>
+<h2 id="Методы"><a class="header" href="#Методы">Методы</a></h2>
+<ul>
+<li><code class="language-Swift">size() -&gt; u64</code> - возвращает количество символов </li>
+<li><code class="language-Swift">at(in u64 index) -&gt; char</code> - обращается к указанному символу с проверкой границ </li>
+</ul>
+<h3 id="Преобразование-в-целочисленное-число"><a class="header" href="#Преобразование-в-целочисленное-число">Преобразование в целочисленное число</a></h3>
+<ul>
+<li><code class="language-Swift">toI32() -&gt; i32</code> </li>
+<li><code class="language-Swift">toI64() -&gt; i64</code></li>
+<li><code class="language-Swift">toU64() -&gt; u64</code></li>
+</ul>
+<h3 id="Преобразование-в-число-с-плавающей-запятой"><a class="header" href="#Преобразование-в-число-с-плавающей-запятой">Преобразование в число с плавающей запятой</a></h3>
+<ul>
+<li><code class="language-Swift">toF32() -&gt; f32</code></li>
+<li><code class="language-Swift">toF64() -&gt; f64</code></li>
+</ul>
+<h2 id="Перезагруженные-операторы"><a class="header" href="#Перезагруженные-операторы">Перезагруженные операторы</a></h2>
+<ul>
+<li><code class="language-Swift">__at__(in u64 index) -&gt; char</code> - поведение аналогично методу at</li>
+<li><code class="language-Swift">__add__(in String lhs, in String rhs) -&gt; String</code> - объединяет две строки</li>
+<li><code class="language-Swift">__mul__(in String str, in u64 times) -&gt; String</code> - повторяет строку заданное число раз</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Динамический-массив-vectort"><a class="header" href="#Динамический-массив-vectort">Динамический массив: Vector&lt;T&gt;</a></h1>
+<h2 id="Объявление-1"><a class="header" href="#Объявление-1">Объявление</a></h2>
+<ul>
+<li><code class="language-Swift">Vector&lt;T&gt;()</code></li>
+<li><code class="language-Swift">Vector&lt;T&gt;(T, T...)</code></li>
+</ul>
+<h2 id="Методы-1"><a class="header" href="#Методы-1">Методы</a></h2>
+<ul>
+<li>
+<p><code class="language-Swift">size() -&gt; u64</code> - возвращает количество элементов </p>
+</li>
+<li>
+<p><code class="language-Swift">at(in u64 index) -&gt; T</code> - обращается к указанному элементу с проверкой границ</p>
+</li>
+<li>
+<p><code class="language-Swift">max() -&gt; T</code> - возвращает наибольший элемент</p>
+</li>
+<li>
+<p><code class="language-Swift">min() -&gt; T</code> - возвращает наименьший элемент</p>
+</li>
+<li>
+<p><code class="language-Swift">max(in T default) -&gt; T</code> - если массив пустой, то возвращает <code>default</code>, иначе наибольший элемент</p>
+</li>
+<li>
+<p><code class="language-Swift">min(in T default) -&gt; T</code> - если массив пустой, то возвращает <code>default</code>, наименьший элемент</p>
+</li>
+<li>
+<p><code class="language-Swift">push_back(in T value) -&gt; void</code> - добавляет элемент в конец</p>
+</li>
+<li>
+<p><code class="language-Swift">pop_back() -&gt; void</code> - удаляет последний элемент </p>
+</li>
+<li>
+<p><code class="language-Swift">sort(in bool reverse = false) -&gt; void</code> - сортирует массив</p>
+</li>
+<li>
+<p><code class="language-Swift">swap(in u64 first, in u64 second) -&gt; void</code> - обмен элементов по первому и второму переданному индексу</p>
+</li>
+</ul>
+<h2 id="Перезагруженные-операторы-1"><a class="header" href="#Перезагруженные-операторы-1">Перезагруженные операторы</a></h2>
+<ul>
+<li><code class="language-Swift">__at__(in u64 index) -&gt; T</code> - поведение аналогично методу at</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Выражения"><a class="header" href="#Выражения">Выражения</a></h1>
+<p>Выражение, это последовательность операторов и их операндов, задающая вычисление. </p>
+<p>Операторы в FSC:</p>
+<div class="table-wrapper"><table><thead><tr><th>Тип операции</th><th>Представление</th></tr></thead><tbody>
+<tr><td>Доступ к переменной класса</td><td>.</td></tr>
+<tr><td>Вызов функции/метода</td><td>()</td></tr>
+<tr><td>Унарные операторы</td><td>~, !</td></tr>
+<tr><td>Умножение, деление, взятие остатка</td><td>*, /, %</td></tr>
+<tr><td>Сложение, вычитание</td><td>+, -</td></tr>
+<tr><td>Логическое и</td><td>&amp;&amp;</td></tr>
+<tr><td>Логическое или</td><td>||</td></tr>
+<tr><td>Операторы сравнения</td><td>&lt;, &gt;, &lt;=, &gt;=, ==, !=</td></tr>
+<tr><td>Операторы присваивания</td><td>=, +=, -=, *=, /=, %=</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="Функция"><a class="header" href="#Функция">Функция</a></h1>
+<p>Функции - это сущности, которые связывают последовательность инструкций (тело функции) с именем и списком из нуля или более аргументов функции. </p>
+<h2 id="Объявление-2"><a class="header" href="#Объявление-2">Объявление</a></h2>
+<p>Функции объявляются при помощи ключевого слова <code class="language-Swift">func</code> и поддерживают автоматическое определение возвращаемого типа. Каждый аргумент функции характеризуется способом передачи, типом и именем.</p>
+<pre><code class="language-Swift">func function()
+{
+    // некоторые инструкции
+}
+</code></pre>
+<h2 id="Способы-передачи-аргумента-в-функцию"><a class="header" href="#Способы-передачи-аргумента-в-функцию">Способы передачи аргумента в функцию</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Ключевое слово</th><th>Тип передачи</th></tr></thead><tbody>
+<tr><td>copy</td><td>для чтения и локального изменения аргумента</td></tr>
+<tr><td>in</td><td>для чтения аргумента</td></tr>
+<tr><td>out</td><td>для записи в аргумент</td></tr>
+<tr><td>inout</td><td>для чтения аргумента и записи в него</td></tr>
+</tbody></table>
+</div><br />
+<pre><code class="language-Swift">func function(in i32 some_variable)
+{}
+</code></pre>
+<h2 id="Ограничения"><a class="header" href="#Ограничения">Ограничения</a></h2>
+<p>При автоматическом определении типа функции, компилятор не может вернуть значение рекурсии до нерекурсивного возврата значения.</p>
+<pre><code class="language-Swift">func fibonacci(in i32 x)
+{
+    if x &gt; 2 {
+        // компилятор не может автоматически определить возвращаемое значение
+        return fibonacci(x - 1) + fibonacci(x - 2)
+    }
+
+    return 1
+}
+</code></pre>
+<pre><code class="language-Swift">func fibonacci(in i32 x)
+{
+    if x &lt;= 2 {
+        return 1
+    }
+
+    // рекурсия может быть использована,
+    // так как возвращаемый тип уже был определен выше
+    return fibonacci(x - 1) + fibonacci(x - 2)
+}
+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Оператор-if-elif-else"><a class="header" href="#Оператор-if-elif-else">Оператор if-elif-else</a></h1>
+<p>Сначала записывается часть <code class="language-Swift">if</code> с условным выражением, далее могут следовать одна или более необязательных частей <code class="language-Swift">elif</code>, и, наконец, необязательная часть  <code class="language-Swift">else</code>.</p>
+<pre><code class="language-Swift">if условие {
+    инструкции
+}
+</code></pre>
+<p>Условие должно являться логическим значением.</p>
+<pre><code class="language-Swift">if x == 10 {
+    print(10)
+}
+</code></pre>
+<pre><code class="language-Swift">if x &gt; 10 {
+    print(&quot;x is greater than 10&quot;)
+}
+elif x &lt; 10 {
+    print(&quot;x is less than 0&quot;)
+}
+else {
+    print(&quot;x is in [0, 10])
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Цикл-while"><a class="header" href="#Цикл-while">Цикл while</a></h1>
+<p>Повторно выполняет оператор, пока значение условия не станет <code class="language-Swift">false</code>. Проверка проводится перед каждой итерацией.</p>
+<pre><code class="language-Swift">while условие {
+    инстукрции
+}
+</code></pre>
+<p>Условие должно являться логическим значением.</p>
+<pre><code class="language-Swift">var i = 0
+
+while i != 10 {
+    print(i)
+    i += 1
+}
+</code></pre>
+<pre><code class="language-Swift">0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Классы-в-fsc"><a class="header" href="#Классы-в-fsc">Классы в FSC</a></h1>
+<p>Классы - это сущности, которые связывают функции общими переменными.</p>
+<h2 id="Объявление-3"><a class="header" href="#Объявление-3">Объявление</a></h2>
+<p>Классы объявляются при помощи ключевого слова <code class="language-Swift">class</code></p>
+<pre><code class="language-swift">class S
+{}
+</code></pre>
+<p>Классы могут содержать в себе переменные и функции (методы).
+Их объявление аналогично обычным <a href="fsc/doc/function.html">функциям</a> и <a href="fsc/doc/variable.html">переменным</a>,
+но с дополнительными аттрибутами доступа: <code class="language-Swift">public</code> и  <code class="language-Swift">
+private</code>.</p>
+<pre><code class="language-swift">class S
+{
+    public var x = 0
+    
+    public func test()
+    {
+        return 0
+    }
+}
+</code></pre>
+<p>Для перезагрузки операторов используются магические методы</p>
+<div class="table-wrapper"><table><thead><tr><th>Метод</th><th>Представление</th></tr></thead><tbody>
+<tr><td>Конструктор</td><td>__init__</td></tr>
+<tr><td>Деструктор</td><td>__del__</td></tr>
+<tr><td>Сложение</td><td>__add__</td></tr>
+<tr><td>Вычитание</td><td>__sub__</td></tr>
+<tr><td>Умножение</td><td>__mul__</td></tr>
+<tr><td>Деление</td><td>__div__</td></tr>
+<tr><td>Взятие остатка от деления</td><td>__mod__</td></tr>
+<tr><td>Сложение с присваиванием</td><td>__iadd__</td></tr>
+<tr><td>Вычитание с присваиванием</td><td>__isub__</td></tr>
+<tr><td>Умножение с присваиванием</td><td>__imul__</td></tr>
+<tr><td>Делине с присваиванием</td><td>__idiv__</td></tr>
+<tr><td>Взятие остатка от деления с присваиванием</td><td>__imod__</td></tr>
+</tbody></table>
+</div>
+<pre><code class="language-swift">class S
+{
+    public func __init__() // конструктор класса
+    {}
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Шаблонные-функции"><a class="header" href="#Шаблонные-функции">Шаблонные функции</a></h1>
+<p>Шаблоны позволяют описывать поведение <a href="fsc/doc/function.html">функции</a>/<a href="fsc/doc/class.html">класса</a> сразу же для нескольких типов.
+При вызове функции или конструкции класса шаблоны могут быть автоматически определены или указаны явно.</p>
+<h2 id="Объявление-4"><a class="header" href="#Объявление-4">Объявление</a></h2>
+<pre><code class="language-Swift">func functionName&lt;имя шаблонного типа, ... &gt;
+</code></pre>
+<pre><code class="language-Swift">class ClassName&lt;имя шаблонного типа, ... &gt;
+</code></pre>
+<h2 id="Примеры-использования"><a class="header" href="#Примеры-использования">Примеры использования</a></h2>
+<pre><code class="language-Swift">func pow2&lt;T&gt;(in T x)
+{
+    return x * x
+}
+
+func main()
+{
+    pow2(10)
+    pow2(10.0)
+}
+</code></pre>
+<h2 id="Ограничения-1"><a class="header" href="#Ограничения-1">Ограничения</a></h2>
+<p>Шаблонные функции на данный момент не могут использоваться внутри <a href="fsc/doc/class.html">классов</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Встроенные-функции"><a class="header" href="#Встроенные-функции">Встроенные функции</a></h1>
+<ul>
+<li><a href="fsc/doc/fsc/doc/input.html">Ввод</a></li>
+<li><a href="fsc/doc/fsc/doc/output.html">Вывод</a></li>
+<li><a href="fsc/doc/fsc/doc/math.html">Математические вычисления</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Ввод"><a class="header" href="#Ввод">Ввод</a></h1>
+<ul>
+<li><code class="language-Swift">input(in String message =&quot;&quot;) -&gt; String</code> - считывает данные из потока ввода-вывода</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Вывод"><a class="header" href="#Вывод">Вывод</a></h1>
+<ul>
+<li><code class="language-Swift">print(in String fmt, ...) -&gt; void</code> - если строка содержит символы форматирования, то печатает в стандартный выходной поток, используя форматированное представление аргументов </li>
+<li><code class="language-Swift">print(...) -&gt; void</code> - печатает в стандартный выходной поток аргументы, форматируя их</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Общие-математические-функции"><a class="header" href="#Общие-математические-функции">Общие математические функции</a></h1>
+<p>В fsc есть ряд встроенные функций для выполнения математических операций и все они могут быть исполнены во время сборки.</p>
+<ul>
+<li><code class="language-Swift">sqrt(in float x) -&gt; float</code> - вычисляет квадратный корень</li>
+<li><code class="language-Swift">log2(in float x) -&gt; float</code> - логарифм по основанию 2 данного числа</li>
+<li><code class="language-Swift">log10(in float x) -&gt; float</code> - логарифм по основанию 10 данного числа</li>
+<li><code class="language-Swift">log(in float x) -&gt; float</code> - вычисляет натуральный логарифм</li>
+<li><code class="language-Swift">log(in float x, in float base) -&gt; float</code> - логарифм данного числа по данному основанию</li>
+<li><code class="language-Swift">trunc(in float x) -&gt; float</code> - ближайшее целое число, не превышающее по величине заданное значение </li>
+<li><code class="language-Swift">floor(in float x) -&gt; float</code> - ближайшее целое число не больше заданного значения </li>
+<li><code class="language-Swift">ceil(in float x) -&gt; float</code> - ближайшее целое число не меньшее заданного значения </li>
+<li><code class="language-Swift">round(in float x) -&gt; float</code> - ближайшее целое число, округление от нуля в промежуточных случаях</li>
+<li><code class="language-Swift">abs(in any_numeric x) -&gt; float</code> - вычисляет абсолютное значение целого числа</li>
+<li><code class="language-Swift">sin(in float x) -&gt; float</code> - вычисляет синус</li>
+<li><code class="language-Swift">cos(in float x) -&gt; float</code> - вычисляет косинус</li>
+<li><code class="language-Swift">tan(in float x) -&gt; float</code> - вычисляет тангенс</li>
+<li><code class="language-Swift">asin(in float x) -&gt; float</code> - вычисляет арксинус</li>
+<li><code class="language-Swift">acos(in any_numeric x) -&gt; float</code> - вычисляет арккосинус </li>
+<li><code class="language-Swift">atan(in any_numeric x) -&gt; float</code> - вычисляет арктангенс</li>
+<li><code class="language-Swift">atan2(in any_numeric y, in any_numeric x) -&gt; float</code> - арктангенс, используя знаки для определения квадрантов</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Примеры-программ-для-fsc"><a class="header" href="#Примеры-программ-для-fsc">Примеры программ для fsc</a></h1>
+<ul>
+<li><a href="fsc/examples/fsc/examples/sqrt.html">Квадратный корень</a></li>
+<li><a href="fsc/examples/fsc/examples/fibonacci.html">Последовательность Фибоначчи</a></li>
+<li><a href="fsc/examples/fsc/examples/bubble_sort.html">Сортировка пузырьком</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Поиск-квадратного-корня-при-помощи-бинарного-поиска"><a class="header" href="#Поиск-квадратного-корня-при-помощи-бинарного-поиска">Поиск квадратного корня при помощи бинарного поиска</a></h1>
+<pre><code class="language-Swift">func ownSqrt(in f64 x)
+{
+    var left = 0 as f64
+    var right = x
+
+    while true
+    {
+        let midpoint = (left + right) / 2.0
+        let midpoint_2 = midpoint * midpoint
+
+        if abs(midpoint_2 - x) &lt;= 1.0e-12
+        {
+            return midpoint
+        }
+
+        if midpoint_2 &gt; x {
+            right = midpoint
+        }
+        else {
+            left = midpoint
+        }
+    }
+}
+
+func main()
+{
+    print(sqrt(2 as f64), ownSqrt(2 as f64))
+    return 0
+}
+</code></pre>
+<p>Output: </p>
+<pre><code>1.4142135623730951 1.4142135623733338
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Вычисление-последовательности-Фибоначчи-при-помощи-рекурсии"><a class="header" href="#Вычисление-последовательности-Фибоначчи-при-помощи-рекурсии">Вычисление последовательности Фибоначчи при помощи рекурсии</a></h1>
+<pre><code class="language-Swift">func fibonacci(in i32 x)
+{
+    if x &lt;= 2 {
+        return 1
+    }
+
+    return fibonacci(x - 1) + fibonacci(x - 2)
+}
+
+func main()
+{
+    var i = 1;
+
+    while i != 20
+    {
+        var result = fibonacci(i)
+        print(&quot;{}: {}\n&quot;, i, result)
+        i += 1
+    }
+
+    return 0
+}
+
+
+</code></pre>
+<p>Output: </p>
+<pre><code>1: 1
+2: 1
+3: 2
+4: 3
+5: 5
+6: 8
+7: 13
+8: 21
+9: 34
+10: 55
+11: 89
+12: 144
+13: 233
+14: 377
+15: 610
+16: 987
+17: 1597
+18: 2584
+19: 4181
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Сортировка-пузырьком-с-использованием-шаблонов"><a class="header" href="#Сортировка-пузырьком-с-использованием-шаблонов">Сортировка пузырьком с использованием шаблонов</a></h1>
+<pre><code class="language-Swift">func bubbleSort&lt;T&gt;(inout T vec)
+{
+    var i = u64()
+    let n = vec.size()
+
+    if n == 0U {
+        return
+    }
+
+    while i &lt; n - 1U {
+        var j = u64()
+
+        while j &lt; n - i - 1U {
+            let next_index = j + 1U
+
+            if vec[j] &gt; vec[next_index] {
+                vec.swap(j, next_index)
+            }
+
+            j += 1U
+        }
+
+        i += 1U
+    }
+}
+
+func sortVector&lt;T&gt;(inout T vec)
+{
+    var vec_copy = vec
+
+    bubbleSort(vec)
+    vec_copy.sort()
+
+    print(&quot;Bubble sort:&quot;, vec)
+    print(&quot;Builtin sort:&quot;, vec_copy)
+}
+
+func main() -&gt; i32
+{
+    var vector_of_int = Vector(10, -10, 0, 20, 100, 200, -175)
+    var vector_of_float = Vector(10.4145, -10.4151123, 0.4152, 20.4125, 100.40, 100.43, -3143.4)
+
+    sortVector(vector_of_int)
+    sortVector(vector_of_float)
+
+    return 0
+}
+</code></pre>
+<p>Output:</p>
+<pre><code>Bubble sort: [-175, -10, 0, 10, 20, 100, 200]
+Builtin sort: [-175, -10, 0, 10, 20, 100, 200]
+Bubble sort: [-3143.4, -10.4151125, 0.4152, 10.4145, 20.4125, 100.4, 100.43]
+Builtin sort: [-3143.4, -10.4151125, 0.4152, 10.4145, 20.4125, 100.4, 100.43]
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="ace.js"></script>
+        <script src="editor.js"></script>
+        <script src="mode-rust.js"></script>
+        <script src="theme-dawn.js"></script>
+        <script src="theme-tomorrow_night.js"></script>
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
