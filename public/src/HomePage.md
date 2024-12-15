@@ -1,5 +1,5 @@
-# Добро пожаловать на сайт проекта ccl-project и fsc
+# ccl-project и math-visualizer 
 
 ## Проект на github.com
-- [fsc](https://github.com/Vaskozlov/fsc)
 - [ccl-project](https://github.com/Vaskozlov/ccl-project)
+- [math-visualizer](https://github.com/Vaskozlov/Math-Visualizer)
