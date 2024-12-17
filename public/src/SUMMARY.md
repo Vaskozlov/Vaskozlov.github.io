@@ -16,6 +16,7 @@
     - [Операторы](astlang2/operators.md)
     - [Control flow](astlang2/control-flow.md)
     - [Функции](astlang2/functions.md)
+    - [Грамматика](astlang2/grammar.md)
 - [Math Visualizer](math-visualizer/math-visualizer.md)
   - [Math Visualizer API]()
       - [Application](math-visualizer/api/application.md)
