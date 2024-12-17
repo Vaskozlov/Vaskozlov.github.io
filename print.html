@@ -1,0 +1,1411 @@
+<!DOCTYPE HTML>
+<html lang="ru" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title></title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="HomePage.html">Главная</a></li><li class="chapter-item expanded "><a href="ccl/ccl.html"><strong aria-hidden="true">1.</strong> CCL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ccl/text_iterator.html"><strong aria-hidden="true">1.1.</strong> Генератор символов</a></li><li class="chapter-item expanded "><a href="ccl/rule.html"><strong aria-hidden="true">1.2.</strong> Правило лексического анализатора</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ccl/union.html"><strong aria-hidden="true">1.2.1.</strong> Множество символов</a></li><li class="chapter-item expanded "><a href="ccl/sequence.html"><strong aria-hidden="true">1.2.2.</strong> Строчка</a></li><li class="chapter-item expanded "><a href="ccl/logical.html"><strong aria-hidden="true">1.2.3.</strong> Логический элемент</a></li><li class="chapter-item expanded "><a href="ccl/crate.html"><strong aria-hidden="true">1.2.4.</strong> Контейнер</a></li><li class="chapter-item expanded "><a href="ccl/examples.html"><strong aria-hidden="true">1.2.5.</strong> Примеры</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.3.</strong> Парсер</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ccl/parser/rules-reader.html"><strong aria-hidden="true">1.3.1.</strong> RulesReader</a></li><li class="chapter-item expanded "><a href="ccl/parser/parser-builder.html"><strong aria-hidden="true">1.3.2.</strong> ParserBuilder</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="astlang2/astlang2.html"><strong aria-hidden="true">2.</strong> Astlang2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="astlang2/structure.html"><strong aria-hidden="true">2.1.</strong> Структура программы</a></li><li class="chapter-item expanded "><a href="astlang2/types.html"><strong aria-hidden="true">2.2.</strong> Типы данных</a></li><li class="chapter-item expanded "><a href="astlang2/operators.html"><strong aria-hidden="true">2.3.</strong> Операторы</a></li><li class="chapter-item expanded "><a href="astlang2/control-flow.html"><strong aria-hidden="true">2.4.</strong> Control flow</a></li><li class="chapter-item expanded "><a href="astlang2/functions.html"><strong aria-hidden="true">2.5.</strong> Функции</a></li><li class="chapter-item expanded "><a href="astlang2/grammar.html"><strong aria-hidden="true">2.6.</strong> Грамматика</a></li></ol></li><li class="chapter-item expanded "><a href="math-visualizer/math-visualizer.html"><strong aria-hidden="true">3.</strong> Math Visualizer</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.1.</strong> Math Visualizer API</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="math-visualizer/api/application.html"><strong aria-hidden="true">3.1.1.</strong> Application</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="math-visualizer/api/application2D.html"><strong aria-hidden="true">3.1.1.1.</strong> Application2D</a></li><li class="chapter-item expanded "><a href="math-visualizer/api/application3D.html"><strong aria-hidden="true">3.1.1.2.</strong> Application3D</a></li></ol></li><li class="chapter-item expanded "><a href="math-visualizer/api/camera.html"><strong aria-hidden="true">3.1.2.</strong> Camera</a></li><li class="chapter-item expanded "><a href="math-visualizer/api/shader.html"><strong aria-hidden="true">3.1.3.</strong> Shader</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.1.4.</strong> Objects</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="math-visualizer/api/objects/shape.html"><strong aria-hidden="true">3.1.4.1.</strong> Shape</a></li><li class="chapter-item expanded "><a href="math-visualizer/api/objects/polygon.html"><strong aria-hidden="true">3.1.4.2.</strong> Polygon</a></li><li class="chapter-item expanded "><a href="math-visualizer/api/objects/sphere.html"><strong aria-hidden="true">3.1.4.3.</strong> Sphere</a></li><li class="chapter-item expanded "><a href="math-visualizer/api/objects/prism.html"><strong aria-hidden="true">3.1.4.4.</strong> Prism</a></li><li class="chapter-item expanded "><a href="math-visualizer/api/objects/function-3d.html"><strong aria-hidden="true">3.1.4.5.</strong> Function3D</a></li><li class="chapter-item expanded "><a href="math-visualizer/api/objects/axes-3d.html"><strong aria-hidden="true">3.1.4.6.</strong> Axes3D</a></li><li class="chapter-item expanded "><a href="math-visualizer/api/objects/axes-2d.html"><strong aria-hidden="true">3.1.4.7.</strong> Axes2D</a></li><li class="chapter-item expanded "><a href="math-visualizer/api/objects/plot-2d.html"><strong aria-hidden="true">3.1.4.8.</strong> Plot2D</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.1.5.</strong> OpenGl</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="math-visualizer/api/gl/vbo.html"><strong aria-hidden="true">3.1.5.1.</strong> Vertex Buffer</a></li><li class="chapter-item expanded "><a href="math-visualizer/api/gl/vao.html"><strong aria-hidden="true">3.1.5.2.</strong> Vertex Array</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> Math Visualizer Examples</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="math-visualizer/examples/fractal.html"><strong aria-hidden="true">3.2.1.</strong> Fractal</a></li><li class="chapter-item expanded "><a href="math-visualizer/examples/dft.html"><strong aria-hidden="true">3.2.2.</strong> Dft</a></li><li class="chapter-item expanded "><a href="math-visualizer/examples/function-3d.html"><strong aria-hidden="true">3.2.3.</strong> Function3D</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="ccl-project-и-math-visualizer"><a class="header" href="#ccl-project-и-math-visualizer">ccl-project и math-visualizer</a></h1>
+<h2 id="Проект-на-githubcom"><a class="header" href="#Проект-на-githubcom">Проект на github.com</a></h2>
+<ul>
+<li><a href="https://github.com/Vaskozlov/ccl-project">ccl-project</a></li>
+<li><a href="https://github.com/Vaskozlov/Math-Visualizer">math-visualizer</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Библиотека-конструирования-компилятора-ccl"><a class="header" href="#Библиотека-конструирования-компилятора-ccl">Библиотека конструирования компилятора ccl</a></h1>
+<p>Возможности библиотеки:</p>
+<ul>
+<li>Генератор символов</li>
+<li>Лексический анализатор</li>
+<li>Помощник в генерации кода</li>
+<li>Другие возможности для упрощения создания компилятора</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Генератор-символов"><a class="header" href="#Генератор-символов">Генератор символов</a></h1>
+<p>Генератор символов выполняет следующие задачи:</p>
+<ul>
+<li>Преобразование UTF-8 в UTF-32</li>
+<li>Отслеживание позиции в файле</li>
+<li>Подсчет количество пробелов и символов табуляции перед токеном</li>
+<li>Предоставление информации для исключений</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Правило-для-лексического-анализатора"><a class="header" href="#Правило-для-лексического-анализатора">Правило для лексического анализатора</a></h1>
+<p>Модификаторы правила:</p>
+<ul>
+<li>! - элемент может стоять в любом месте (рекомендуется применять к терминальным символам грамматики)</li>
+</ul>
+<p>Правило состоит из 4 основных элементов:</p>
+<ul>
+<li><a href="ccl/union.html">множества символов</a></li>
+<li><a href="ccl/sequence.html">строчки</a></li>
+<li><a href="ccl/logical.html">логического элемента</a></li>
+<li><a href="ccl/crate.html">контейнера правил</a></li>
+</ul>
+<p>К каждому правилу могут быть применены следующие постфиксальные модификаторы:</p>
+<ul>
+<li>p - элемент является префиксом/постфиксом (изначально создается префикс, но если уже существует элемент, который не является префиксным, то создается постфикс)</li>
+<li>^ - все, кроме данного элемента</li>
+<li>{n, m} - элемент повторяется от n до m раз включительно</li>
+<li>* - повторяется ноль раз или больше</li>
+<li>+ - повторяется больше нулю раз</li>
+<li>? - повторяется 0 или 1 раз</li>
+</ul>
+<p>Примеры правил можно найти <a href="ccl/examples.html">тут</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Множество-символов"><a class="header" href="#Множество-символов">Множество символов</a></h1>
+<p>Множество символов задается скобками [ и ].
+Внутри множества прописываются символы, которы в него входят.
+Для задания последовательности символом используется -.
+К примеру, множество <code>[a-z]</code> будет включать в себя все символы от a до z.
+Если необходимо включить в правило -, [ или другой специальный символ, то необходимо поставить \ перед символов.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Строка"><a class="header" href="#Строка">Строка</a></h1>
+<p>Строка - упорядоченное множество из n символов.
+Строка задается символами, заключенными между &quot;.
+Если необходимо включить специальный символ, то ставится \ перед ним.</p>
+<pre><code>&quot;some \&quot;string\&quot;...&quot;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Логический-элемент"><a class="header" href="#Логический-элемент">Логический элемент</a></h1>
+<p>Логический элемент создается при помощи операторов | и &amp;.</p>
+<ul>
+<li>| - или первый или второй элемент</li>
+<li>&amp; - первый и второй элемент (при анализе будет учитываться только длина первого)</li>
+</ul>
+<pre><code>[a-z] | [0-9]
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Контейнер-правил"><a class="header" href="#Контейнер-правил">Контейнер правил</a></h1>
+<p>Контейнер правил может содержать в себе другие элементы правила (включая другие контейнеры).
+Контейнер создается при помощи ( и ).</p>
+<pre><code>([a-z] [0-9])
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Примеры-правил"><a class="header" href="#Примеры-правил">Примеры правил</a></h1>
+<ul>
+<li><code>! [+]</code> - знак сложения, который может находиться где угодно</li>
+<li><code>[0-9]+ ( [a-zA-Z_] [a-zA-Z0-9_]* )?p</code> - последовательность цифр, за которой следует опциональный постфикс в виде идентификатора</li>
+<li><code>! &quot;\&quot;&quot; ([&quot;\n]^ | &quot;\\\&quot;&quot;)* &quot;\&quot;&quot;</code> - элемент, который заключен между &quot; и может находиться в любом месте; внутри него находятся либо символы, кроме &quot; и символа новой строки, либо \&quot; (стандартная строчка в языке программирования)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rulesreader"><a class="header" href="#rulesreader">RulesReader</a></h1>
+<p>Класс <code>RulesReader</code> предназначен для чтения правил из файла и создания генератора парсеров.</p>
+<h2 id="Методы-и-конструктор"><a class="header" href="#Методы-и-конструктор">Методы и конструктор</a></h2>
+<p><code class="language-C++">RulesReader(
+const std::unordered_map&lt;std::string, SmallId&gt; &amp;default_rules,
+isl::string_view input, isl::string_view filename = {})</code> – принимает на вход словарь с правилами по умолчанию, строку с текстом правил и имя файла, из которого был прочитан текст. Ключом в словаре правил по умолчанию служит название правила, а значение это уникальный номер правила.</p>
+<p><code class="language-C++">ParserBuilder &amp; getParserBuilder()</code> – возвращает генератор парсеров.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="parserbuilder"><a class="header" href="#parserbuilder">ParserBuilder</a></h1>
+<p>Класс <code>ParserBuilder</code> хранит в себе созданные правила и позволяет сгенерировать различные типы парсеров по ним.</p>
+<h2 id="Методы-и-конструктор-1"><a class="header" href="#Методы-и-конструктор-1">Методы и конструктор</a></h2>
+<p><code class="language-C++">ParserBuilder(const std::unordered_map&lt;std::string, SmallId&gt; &amp;default_rules)</code> –
+принимает на вход словарь с правилами по умолчанию (более подробно про словарь с правилами написано в <a href="ccl/parser/rules-reader.html">RulesReader</a>.</p>
+<p><code class="language-C++">LrParser buildLr1()</code> – создает LR(1) парсер.</p>
+<p><code class="language-C++">GlrParser buildGlr()</code> – создает GLR парсер.</p>
+<p><code class="language-C++">Ll1Parser buildLl1()</code> – создает LL(1) парсер.</p>
+<p><code class="language-C++">GllParser buildGLL()</code> – создает GLL парсер.</p>
+<p><code class="language-C++">SmallId addRule(const std::string &amp;rule_name)</code> – добавляет правило в генератор парсеров и возвращает уникальный номер созданного правила.</p>
+<p><code class="language-C++">std::function<a href="std::string(SmallId)">std::string(SmallId)</a> getIdToNameTranslationFunction() const</code> – создает функцию, которая по уникальному номеру возвращает название правила.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="astlang2"><a class="header" href="#astlang2">Astlang2</a></h1>
+<p>Astlang2 это простой интерпретируемый язык программирования. Поддерживает статическая и динамическая типизация. На
+данный момент поддерживаются операции с базовыми типами данных, создание функции, доступ к полям объекта и вызов
+методов.</p>
+<ul>
+<li><a href="astlang2/structure.html">Структура программы</a></li>
+<li><a href="astlang2/types.html">Типы данных</a></li>
+<li><a href="astlang2/operators.html">Операторы</a></li>
+<li><a href="astlang2/control-flow.html">Control flow</a></li>
+<li><a href="astlang2/functions.html">Функции</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="Структура-программы"><a class="header" href="#Структура-программы">Структура программы</a></h2>
+<p>Исполнение начинает с глобального блока. Исполнение начинается с глобального блока. Вызов функции возможен только после
+объявления. Поддерживается рекурсивный вызов функций. </p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="Типы-данных"><a class="header" href="#Типы-данных">Типы данных</a></h2>
+<ul>
+<li><code>int</code> - целочисленный тип</li>
+<li><code>uint</code> - целочисленный тип без знака</li>
+<li><code>float</code> - вещественный тип</li>
+<li><code>double</code> - вещественный тип с двойной точностью</li>
+<li><code>bool</code> - логический тип</li>
+<li><code>string</code> - строковый тип</li>
+<li><code>void</code> - тип отсутствия значения</li>
+<li><code>vec2</code> - вектор из двух элементов типа <code>float</code></li>
+<li><code>vec3</code> - вектор из трех элементов типа <code>float</code></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="Операторы"><a class="header" href="#Операторы">Операторы</a></h2>
+<ul>
+<li><code>+</code> - сложение</li>
+<li><code>-</code> - вычитание</li>
+<li><code>*</code> - умножение</li>
+<li><code>/</code> - деление</li>
+<li><code>%</code> - остаток от деления</li>
+<li><code>==</code> - равно</li>
+<li><code>!=</code> - не равно</li>
+<li><code>&gt;</code> - больше</li>
+<li><code>&lt;</code> - меньше</li>
+<li><code>&gt;=</code> - больше или равно</li>
+<li><code>&lt;=</code> - меньше или равно</li>
+<li><code>&amp;&amp;</code> - логическое и</li>
+<li><code>||</code> - логическое или</li>
+<li><code>!</code> - логическое не</li>
+<li><code>=</code> - присваивание</li>
+<li><code>+=</code> - сложение с присваиванием</li>
+<li><code>-=</code> - вычитание с присваиванием</li>
+<li><code>*=</code> - умножение с присваиванием</li>
+<li><code>/=</code> - деление с присваиванием</li>
+<li><code>.</code> - доступ к полю объекта</li>
+<li><code>()</code> - вызов функции</li>
+</ul>
+<p>Приоритет операторов аналогичен приоритету операторов в языке C++. Со встроенными типами данных бинарные операции можно выполнять только если типы данных совпадают.</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="control-flow"><a class="header" href="#control-flow">Control flow</a></h2>
+<ul>
+<li><code>if</code> - условный оператор
+<ul>
+<li><code>elif</code> - ветвь условного оператора</li>
+<li><code>else</code> - ветвь условного оператора</li>
+</ul>
+</li>
+<li><code>while</code> - цикл с предусловием</li>
+</ul>
+<pre><code class="language-astlang2">var i = 0;
+
+while i &lt; 10 {
+    println(i);
+    i = i + 1;
+}
+
+println(&quot;Done!&quot;);
+</code></pre>
+<p>Вывод программы:</p>
+<pre><code>0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Done!
+</code></pre>
+<pre><code class="language-astlang2">var a = 5;
+
+if a &gt; 3 {
+    println(&quot;a is greater than 3&quot;);
+} elif a == 3 {
+    println(&quot;a is equal to 3&quot;);
+} else {
+    println(&quot;a is less than 3&quot;);
+}
+</code></pre>
+<p>Вывод программы:</p>
+<pre><code>a is greater than 3
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="Функции"><a class="header" href="#Функции">Функции</a></h2>
+<p>Функции объявляются с помощью ключевого слова <code>def</code>. Функция может принимать любое количество аргументов. Возвращаемое значение функции указывается после символа <code>-&gt;</code>. Если функция не возвращает значение, то указывается тип <code>any</code>. Пример объявления функции:</p>
+<pre><code class="language-astlang">def sum(int a, int b) -&gt; int {
+    return a + b;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Грамматика-языка-astlang2-в-формате-cclp"><a class="header" href="#Грамматика-языка-astlang2-в-формате-cclp">Грамматика языка astlang2 в формате cclp</a></h1>
+<pre><code>%PARSER%
+
+GOAL:
+    GLOBAL_DECLARATIONS
+
+GLOBAL_DECLARATIONS:
+    GLOBAL_DECLARATION GLOBAL_DECLARATIONS
+    | GLOBAL_DECLARATION
+    | EPSILON
+
+GLOBAL_DECLARATION:
+    FUNCTION_DEFINITION
+    | PARSER_RULE
+    | LEXER_RULE
+    | STATEMENT
+
+LEXER_RULE:
+    &quot;lexer&quot; IDENTIFIER
+    '{'
+        LEXER_RULE_BODY
+    '}'
+
+LEXER_RULE_BODY:
+    LEXER_RULE_BODY ',' EXPRESSION
+    | EXPRESSION
+    | EPSILON
+
+PARSER_RULE:
+    &quot;parser&quot; IDENTIFIER
+    '{'
+        PARSER_RULE_BODY
+    '}'
+
+PARSER_RULE_BODY:
+    PARSER_SYMBOLS ';' PARSER_FUNCTIONS
+
+PARSER_FUNCTIONS:
+    PARSER_FUNCTIONS FUNCTION_DEFINITION
+    | FUNCTION_DEFINITION
+    | EPSILON
+
+PARSER_SYMBOLS:
+    PARSER_SYMBOLS ',' EXPRESSION
+    | EXPRESSION
+    | EPSILON
+
+FUNCTION_DEFINITION:
+    &quot;def&quot; IDENTIFIER '(' FUNCTION_DEFINITION_ARGUMENTS ')' FUNCTION_RETURN_TYPE
+    '{'
+        STATEMENTS
+    '}'
+
+FUNCTION_DEFINITION_ARGUMENTS:
+    FUNCTION_DEFINITION_ARGUMENT ',' FUNCTION_DEFINITION_ARGUMENTS
+    | FUNCTION_DEFINITION_ARGUMENT
+    | EPSILON
+
+FUNCTION_DEFINITION_ARGUMENT:
+    TYPE IDENTIFIER
+
+FUNCTION_RETURN_TYPE:
+    '-&gt;' TYPE
+    | EPSILON
+
+STATEMENTS:
+    STATEMENT STATEMENTS
+    | STATEMENT
+    | EPSILON
+
+STATEMENT:
+    ASSIGNMENT_EXPRESSION ';'
+    | VARIABLE_DECLARATION ';'
+    | TYPE_VARIABLE_DECLARATION ';'
+    | FOR_LOOP
+    | WHILE_LOOP
+    | IF_STATEMENT
+    | RETURN_STATEMENT ';'
+
+RETURN_STATEMENT:
+    &quot;return&quot; ASSIGNMENT_EXPRESSION
+    | &quot;return&quot;
+
+IF_STATEMENT:
+    IF_BLOCK
+    ELIF_BLOCK
+    ELSE_BLOCK
+
+IF_BLOCK:
+    &quot;if&quot; ASSIGNMENT_EXPRESSION
+    '{'
+        STATEMENTS
+    '}'
+
+ELIF_BLOCK:
+    &quot;elif&quot; ASSIGNMENT_EXPRESSION
+    '{'
+        STATEMENTS
+    '}'
+    ELIF_BLOCK
+    | EPSILON
+
+ELSE_BLOCK:
+    &quot;else&quot;
+    '{'
+        STATEMENTS
+    '}'
+    | EPSILON
+
+LOGICAL_OR_EXPRESSION:
+    LOGICAL_OR_EXPRESSION '||' LOGICAL_AND_EXPRESSION
+    | LOGICAL_AND_EXPRESSION
+
+LOGICAL_AND_EXPRESSION:
+    LOGICAL_AND_EXPRESSION '&amp;&amp;' BITWISE_OR_EXPRESSION
+    | BITWISE_OR_EXPRESSION
+
+BITWISE_OR_EXPRESSION:
+    BITWISE_OR_EXPRESSION '|' BITWISE_XOR_EXPRESSION
+    | BITWISE_XOR_EXPRESSION
+
+BITWISE_XOR_EXPRESSION:
+    BITWISE_XOR_EXPRESSION '^' BITWISE_AND_EXPRESSION
+    | BITWISE_AND_EXPRESSION
+
+BITWISE_AND_EXPRESSION:
+    BITWISE_AND_EXPRESSION '&amp;' EQUALITY
+    | EQUALITY
+
+EQUALITY:
+    EQUALITY '==' COMPARISON
+    | EQUALITY '!=' COMPARISON
+    | COMPARISON
+
+COMPARISON:
+    COMPARISON '&lt;' EXPRESSION
+    | COMPARISON '&gt;' EXPRESSION
+    | COMPARISON '&lt;=' EXPRESSION
+    | COMPARISON '&gt;=' EXPRESSION
+    | EXPRESSION
+
+ASSIGNMENT_EXPRESSION:
+    LOGICAL_OR_EXPRESSION '=' ASSIGNMENT_EXPRESSION
+    | LOGICAL_OR_EXPRESSION
+
+EXPRESSION:
+    EXPRESSION '+' TERM
+    | EXPRESSION '-' TERM
+    | TERM
+
+TERM:
+    TERM '*' VALUE
+    | TERM '/' VALUE
+    | VALUE
+
+VALUE:
+    '-' VALUE
+    | '+' VALUE
+    | FACTOR
+
+VARIABLE_DECLARATION:
+    &quot;var&quot; IDENTIFIER '=' ASSIGNMENT_EXPRESSION
+
+TYPE_VARIABLE_DECLARATION:
+    &quot;var&quot; IDENTIFIER ':' TYPE '=' ASSIGNMENT_EXPRESSION
+
+FOR_LOOP:
+    &quot;for&quot; IDENTIFIER &quot;in&quot; ASSIGNMENT_EXPRESSION
+    '{'
+        STATEMENTS
+    '}'
+
+WHILE_LOOP:
+    &quot;while&quot; ASSIGNMENT_EXPRESSION
+    '{'
+        STATEMENTS
+    '}'
+
+FUNCTION_CALL:
+    IDENTIFIER '(' FUNCTION_CALL_ARGUMENTS ')'
+
+FUNCTION_CALL_ARGUMENTS:
+    ASSIGNMENT_EXPRESSION ',' FUNCTION_CALL_ARGUMENTS
+    | ASSIGNMENT_EXPRESSION
+    | EPSILON
+
+METHOD_CALL:
+    FACTOR '.' IDENTIFIER '(' FUNCTION_CALL_ARGUMENTS ')'
+
+FIELD_ACCESS:
+    FACTOR '.' IDENTIFIER
+
+FACTOR:
+    NUMBER
+    | FLOAT
+    | ARRAY
+    | &quot;true&quot;
+    | &quot;false&quot;
+    | IDENTIFIER
+    | STRING
+    | FUNCTION_CALL
+    | METHOD_CALL
+    | FIELD_ACCESS
+    | '(' ASSIGNMENT_EXPRESSION ')'
+
+ARRAY:
+    '[' ARRAY_ELEMENTS ']'
+
+ARRAY_ELEMENTS:
+    ASSIGNMENT_EXPRESSION ',' ARRAY_ELEMENTS
+    | ASSIGNMENT_EXPRESSION
+
+TYPE:
+    IDENTIFIER
+    | IDENTIFIER '&lt;' TYPE '&gt;'
+
+%LEXER%
+IDENTIFIER: [a-zA-Z_] [a-zA-Z0-9_]*
+FLOAT:      [0-9]+[.][0-9]+
+NUMBER:     [0-9]+
+STRING:     ! [&quot;] (&quot;\\\&quot;&quot; | [&quot;]^)* [&quot;]
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Программа-по-визуализации-математических-функций"><a class="header" href="#Программа-по-визуализации-математических-функций">Программа по визуализации математических функций</a></h1>
+<h2 id="Описание"><a class="header" href="#Описание">Описание</a></h2>
+<p>Набор инструментов для визуализации 2D и 3D объектов, а также математических функций. </p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Базовый-класс-приложения"><a class="header" href="#Базовый-класс-приложения">Базовый класс приложения</a></h1>
+<h2 id="Описание-1"><a class="header" href="#Описание-1">Описание</a></h2>
+<p>Базовый класс OpenGl приложение с интеграцией ImGUI.</p>
+<h2 id="Методы-класса"><a class="header" href="#Методы-класса">Методы класса</a></h2>
+<p><code class="language-C++">Application(int width, int height, std::string window_title, int multisampling_level)</code> – создает окно приложения с заданными параметрами и производит инициализацию OpenGL, GLFW, ImGUI.</p>
+<p><code class="language-C++">virtual ~Application()</code></p>
+<p><code class="language-C++">void run()</code> – запускает цикл обработки событий и отрисовки.</p>
+<p><code class="language-C++">virtual void init()</code> – метод инициализации приложения.</p>
+<p><code class="language-C++">virtual void update()</code> – метод обновления приложения.</p>
+<p><code class="language-C++">virtual void onResize(int width, int height)</code> – вызывается при изменении размера приложения.</p>
+<p><code class="language-C++">virtual void onMouseMovement(double x_pos_in, double y_pos_in)</code> – вызывается при движении мыши, в качестве параметром передается позиция мыши.</p>
+<p><code class="language-C++">virtual void onMouseRelativeMovement(double delta_x, double delta_y)</code> – вызывается при движении мыши, в качестве параметров передается относительное передвижение мыши (от прошлого кадра).</p>
+<p><code class="language-C++">virtual void onScoll(double x_offset, double y_offset)</code> – вызывается при прокрутке колеса мыши.</p>
+<p><code class="language-C++">void setClearColor(glm::vec4 clear_color)</code> – устанавливает цвет очистки экрана.</p>
+<p><code class="language-C++">virtual void processInput()</code> – вызывается при вводе изменении состояния ввода с клавиатуры.</p>
+<p><code class="language-C++">virtual void onLeaveOrEnter(bool entered)</code> – вызывается при выходе приложения из фокуса пользователя и при появлении в фокусе.</p>
+<p><code class="language-C++">template&lt;b::embed_string_literal fontPath&gt; <br />
+ImFont * loadFont(const float font_size = 45.0F) const</code> – загружает шрифт для ImGui из встроенного ресурса.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Базовый-класс-приложения-для-2d-графики"><a class="header" href="#Базовый-класс-приложения-для-2d-графики">Базовый класс приложения для 2D графики</a></h1>
+<h2 id="Описание-2"><a class="header" href="#Описание-2">Описание</a></h2>
+<p>Базовый класс OpenGl приложение для 2D графики с интеграцией ImGUI.</p>
+<h2 id="Объявление"><a class="header" href="#Объявление">Объявление</a></h2>
+<pre><code class="language-cpp">class Application2D : public Application
+</code></pre>
+<h2 id="Методы-класса-1"><a class="header" href="#Методы-класса-1">Методы класса</a></h2>
+<p><code class="language-C++">void processInput() override</code> – вызывает метод базового класса и изменяет позицию камеры, по нажатию клавиш W, A, S, D.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Базовый-класс-приложения-для-3d-графики"><a class="header" href="#Базовый-класс-приложения-для-3d-графики">Базовый класс приложения для 3D графики</a></h1>
+<h2 id="Описание-3"><a class="header" href="#Описание-3">Описание</a></h2>
+<p>Базовый класс OpenGl приложение для 3D графики с интеграцией ImGUI.</p>
+<h2 id="Объявление-1"><a class="header" href="#Объявление-1">Объявление</a></h2>
+<pre><code class="language-cpp">class Application3D : public Application
+</code></pre>
+<h2 id="Методы-класса-2"><a class="header" href="#Методы-класса-2">Методы класса</a></h2>
+<p><code class="language-C++">void processInput() override</code> – вызывает метод базового класса и изменяет позицию камеры, по нажатию клавиш W, A, S, D.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="camera"><a class="header" href="#camera">Camera</a></h1>
+<h2 id="Описание-4"><a class="header" href="#Описание-4">Описание</a></h2>
+<p>Класс, который позволяет управлять положением и ориентацией камеры в пространстве.</p>
+<h2 id="Публичные-поля"><a class="header" href="#Публичные-поля">Публичные поля</a></h2>
+<p><code class="language-C++">float movementSpeed</code> – скорость передвижения камеры, при вызове
+методов <code class="language-C++">move()</code>.</p>
+<h2 id="Методы-и-конструкторы"><a class="header" href="#Методы-и-конструкторы">Методы и конструкторы</a></h2>
+<p><code class="language-C++"> Camera(const glm::vec3 position, const glm::vec3 camera_up, const float camera_yaw, const float camera_pitch)
+</code> – конструктор, который инициализирует положение и ориентацию камеры.</p>
+<p><code class="language-C++">glm::mat4 getViewMatrix() const</code> – возвращает матрицу вида камеры.</p>
+<p><code class="language-C++">float getZoom() const noexcept</code> – возвращает угол обзора камеры.</p>
+<p><code class="language-C++">void move(const CameraMovement direction, const float deltaTime)</code> – перемещает камеру в заданном направлении.</p>
+<p><code class="language-C++">void rotate(const double x_pos_in, const double y_pos_in)</code> – поворачивает камеру по оси X и Y .</p>
+<p><code class="language-C++">void processMouseMovement(float xOffset, float yOffset, const GLboolean constrainPitch)</code> – обрабатывает движение мыши.</p>
+<p><code class="language-C++">void processMouseScroll(float yOffset)</code> – обрабатывает прокрутку колеса мыши, изменяя zoom.</p>
+<p><code class="language-C++">void move(const float delta_time, const float multiplier = 1.0F)</code> – перемещает камеру вперед, назад, влево, вправо, в зависимости от вызванной функции.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="shader"><a class="header" href="#shader">Shader</a></h1>
+<h2 id="Описание-5"><a class="header" href="#Описание-5">Описание</a></h2>
+<p>Класс Shader, предназначен для создания шейдера. Класс собирает шейдер из исходного кода и компилирует его. Поддерживаются шейдеры типа вершинный и фрагментный. После компиляции содержит в себе номер программы, после вызова деструктора программа будет уничтожена.</p>
+<h2 id="Методы-и-конструкторы-1"><a class="header" href="#Методы-и-конструкторы-1">Методы и конструкторы</a></h2>
+<p><code class="language-C++">Shader(  const std::vector&lt;std::string&gt; &amp;vertex_shaders,
+const std::vector&lt;std::string&gt; &amp;fragment_shaders)</code> – в качестве аргументов передаются исходные коды шейдеров на языке GLSL.</p>
+<p><code class="language-C++">~Shader()</code> – деструктор.</p>
+<p><code class="language-C++">void use()</code> – активирует шейдер.</p>
+<p><code class="language-C++">void setBool(const std::string &amp;name, bool value) const</code> – устанавливает значение типа bool в uniform шейдера.</p>
+<p><code class="language-C++">void setInt(const std::string &amp;name, int value) const</code> – устанавливает значение типа int в uniform шейдера.</p>
+<p><code class="language-C++">void setFloat(const std::string &amp;name, float value) const</code> – устанавливает значение типа float в uniform шейдера.</p>
+<p><code class="language-C++">void setVec2(const std::string &amp;name, const glm::vec2 &amp;value) const</code> – устанавливает значение типа glm::vec2 в uniform шейдера.</p>
+<p><code class="language-C++">void setVec3(const std::string &amp;name, const glm::vec3 &amp;value) const</code> – устанавливает значение типа glm::vec3 в uniform шейдера.</p>
+<p><code class="language-C++">void setVec4(const std::string &amp;name, const glm::vec4 &amp;value) const</code> – устанавливает значение типа glm::vec4 в uniform шейдера.</p>
+<p><code class="language-C++">void setMat2(const std::string &amp;name, const glm::mat2 &amp;mat) const</code> – устанавливает значение типа glm::mat2 в uniform шейдера.</p>
+<p><code class="language-C++">void setMat3(const std::string &amp;name, const glm::mat3 &amp;mat) const</code> – устанавливает значение типа glm::mat3 в uniform шейдера.</p>
+<p><code class="language-C++">void setMat4(const std::string &amp;name, const glm::mat4 &amp;mat) const</code> – устанавливает значение типа glm::mat4 в uniform шейдера.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="polygonshape"><a class="header" href="#polygonshape">PolygonShape</a></h1>
+<h2 id="Описание-6"><a class="header" href="#Описание-6">Описание</a></h2>
+<p>Базовый класс объекта сцены. Содержит в себе информацию, о вершинах фигуры и определяет методы для работы с ней.</p>
+<h2 id="Объявление-2"><a class="header" href="#Объявление-2">Объявление</a></h2>
+<pre><code class="language-C++">class Shape : public VerticesContainer&lt;glm::vec3&gt;
+</code></pre>
+<h2 id="Методы-и-конструкторы-2"><a class="header" href="#Методы-и-конструкторы-2">Методы и конструкторы</a></h2>
+<p><code class="language-C++">Shape()</code></p>
+<p><code class="language-C++">virtual ~Shape()</code></p>
+<p><code class="language-C++">void draw() const</code> – устанавливает VAO фигуры и вызывает метод doDraw.</p>
+<p><code class="language-C++">virtual void doDraw() const = 0</code> – реализует отрисовку фигуры.</p>
+<p><code class="language-C++">void drawAt(const Shader &amp;shader, const glm::vec3 location, const float angle = 0.0F, const glm::vec3 rotation_vec) const </code> – отрисовывает фигуру с заданным смещением и углом поворота.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="polygonshape-1"><a class="header" href="#polygonshape-1">PolygonShape</a></h1>
+<h2 id="Описание-7"><a class="header" href="#Описание-7">Описание</a></h2>
+<p>Базовый класс полигона. Реализует функцию по отрисовки полигона.</p>
+<h2 id="Объявление-3"><a class="header" href="#Объявление-3">Объявление</a></h2>
+<pre><code class="language-C++">class PolygonsShape : public Shape
+</code></pre>
+<h2 id="Методы-и-конструкторы-3"><a class="header" href="#Методы-и-конструкторы-3">Методы и конструкторы</a></h2>
+<p><code class="language-C++">void doDraw() const -&gt; override</code> – реализует отрисовку полигона, как набора треугольников.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sphere"><a class="header" href="#sphere">Sphere</a></h1>
+<h2 id="Описание-8"><a class="header" href="#Описание-8">Описание</a></h2>
+<p>Класс для создания сферы. В результате будет создан PolygonsShape, который можно добавить в сцену.</p>
+<h2 id="Объявление-4"><a class="header" href="#Объявление-4">Объявление</a></h2>
+<pre><code class="language-C++">class Sphere final : public detail::PolygonsShape
+</code></pre>
+<h2 id="Методы-и-конструкторы-4"><a class="header" href="#Методы-и-конструкторы-4">Методы и конструкторы</a></h2>
+<p><code class="language-C++">Sphere(float radius, isl::u32 slices, isl::u32 stacks)</code> – создает сферу с заданным радиусом и количеством фрагментов.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="prism"><a class="header" href="#prism">Prism</a></h1>
+<h2 id="Описание-9"><a class="header" href="#Описание-9">Описание</a></h2>
+<p>Класс для создания призмы. В результате будет создан Polygon, который можно добавить в сцену.</p>
+<h2 id="Объявление-5"><a class="header" href="#Объявление-5">Объявление</a></h2>
+<pre><code class="language-C++">class Prism : public detail::Polygon
+</code></pre>
+<h2 id="Методы-и-конструкторы-5"><a class="header" href="#Методы-и-конструкторы-5">Методы и конструкторы</a></h2>
+<p><code class="language-C++">Prism(float radius, float height, uint32_t vertices_count)</code> – создает призму заданной высоты и с основанием, равным правильному многоугольнику с радиусом описанной окружности равным radius.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="function3d"><a class="header" href="#function3d">Function3D</a></h1>
+<h2 id="Описание-10"><a class="header" href="#Описание-10">Описание</a></h2>
+<p>Класс для создания функции в 3D. В результате будет создан PolygonsShape, который можно добавить в сцену.</p>
+<h2 id="Объявление-6"><a class="header" href="#Объявление-6">Объявление</a></h2>
+<pre><code class="language-C++">class Function3D final : public detail::PolygonsShape
+</code></pre>
+<h2 id="Методы-и-конструкторы-6"><a class="header" href="#Методы-и-конструкторы-6">Методы и конструкторы</a></h2>
+<p><code class="language-C++">Function3D(const std::function&lt;float(glm::vec2)&gt; &amp;function, const float min_x, const float min_y,
+const float min_z, const float max_x, const float max_y, const float max_z)</code> – создает функцию по заданной формуле.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="axes3d"><a class="header" href="#axes3d">Axes3D</a></h1>
+<h2 id="Описание-11"><a class="header" href="#Описание-11">Описание</a></h2>
+<p>Класс для создания системы координат с 3 координатными осями. В результате будет создан Polygon, который можно добавить в сцену.</p>
+<h2 id="Объявление-7"><a class="header" href="#Объявление-7">Объявление</a></h2>
+<pre><code class="language-C++">class Axes3D final : public detail::Polygon
+</code></pre>
+<h2 id="Методы-и-конструкторы-7"><a class="header" href="#Методы-и-конструкторы-7">Методы и конструкторы</a></h2>
+<p><code class="language-C++">Axes3D(std::int32_t axis_size)</code> – создает систему координат заданного размера.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="axes2d"><a class="header" href="#axes2d">Axes2D</a></h1>
+<h2 id="Описание-12"><a class="header" href="#Описание-12">Описание</a></h2>
+<p>Класс для создания системы координат с 2 координатными осями. В результате будет создан Polygon, который можно добавить в сцену.</p>
+<h2 id="Объявление-8"><a class="header" href="#Объявление-8">Объявление</a></h2>
+<pre><code class="language-C++">class Axes2D final : public detail::Polygon
+</code></pre>
+<h2 id="Методы-и-конструкторы-8"><a class="header" href="#Методы-и-конструкторы-8">Методы и конструкторы</a></h2>
+<p><code class="language-C++">Axes2D(std::int32_t axis_size)</code> – создает систему координат заданного размера.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="plot2d"><a class="header" href="#plot2d">Plot2D</a></h1>
+<h2 id="Описание-13"><a class="header" href="#Описание-13">Описание</a></h2>
+<p>Класс для создания графика функции по заданным точкам. В результате будет создан PolygonsShape, который можно добавить в
+сцену.</p>
+<h2 id="Объявление-9"><a class="header" href="#Объявление-9">Объявление</a></h2>
+<pre><code class="language-C++">class Plot2D final : public detail::PolygonsShape
+</code></pre>
+<h2 id="Методы-и-конструкторы-9"><a class="header" href="#Методы-и-конструкторы-9">Методы и конструкторы</a></h2>
+<p><code class="language-C++">Plot2D(std::span<const float> x, std::span<const float> y, float thickness)</code> –
+создает график функцию по заданным точкам.</p>
+<p><img src="math-visualizer/api/objects/../../../images/plot2d.png" alt="Пример графика" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vbo"><a class="header" href="#vbo">VBO</a></h1>
+<h2 id="Описание-14"><a class="header" href="#Описание-14">Описание</a></h2>
+<p>VBO (Vertex Buffer Object) - это объект, который хранит массив вершинных данных. VBO используется для хранения вершинных данных, таких как позиция, цвет, текстурные координаты и т.д.</p>
+<h2 id="Методы-и-конструкторы-10"><a class="header" href="#Методы-и-конструкторы-10">Методы и конструкторы</a></h2>
+<p><code class="language-C++">VBO()</code> - создает VBO, сохраняя его номер в переменной instanceVBO.</p>
+<p><code class="language-C++">~VBO()</code> - удаляет созданный буфер.</p>
+<p><code class="language-C++">void bind() const</code> - привязывает VBO к текущему контексту OpenGL.</p>
+<p><code class="language-C++">void unbind() const</code> - отвязывает VBO от текущего контекста OpenGL.</p>
+<p><code class="language-C++">void setData(const void *data, size_t size, GLenum mode = GL_STATIC_DRAW)</code> - загружает данные в VBO по переделанному адресу.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vbo-1"><a class="header" href="#vbo-1">VBO</a></h1>
+<h2 id="Описание-15"><a class="header" href="#Описание-15">Описание</a></h2>
+<p>VAO (Vertex Array Object) - это объект, который хранит настройки вершинных атрибутов. VAO используется для хранения настроек вершинных атрибутов, таких как позиция, цвет, текстурные координаты и т.д.</p>
+<h2 id="Методы-и-конструкторы-11"><a class="header" href="#Методы-и-конструкторы-11">Методы и конструкторы</a></h2>
+<p><code class="language-C++">VAO()</code> - создает VAO, сохраняя его номер в переменной instanceVAO.</p>
+<p><code class="language-C++">~VAO()</code> - удаляет созданный объект.</p>
+<p><code class="language-C++">void bind() const</code> – привязывает VAO к текущему контексту OpenGL.</p>
+<p><code class="language-C++">void unbind() const</code> - отвязывает VAO от текущего контекста OpenGL.</p>
+<p><code class="language-C++">void bind(GLsizei array_attribute, GLint size, GLenum type, GLsizei stride, GLsizei offset)</code> - устанавливает атрибуты вершинного массива для шейдера.</p>
+<p><code class="language-C++">void bindInstanceParameters(GLsizei array_attribute, GLint divisor)</code> - устанавливает параметры инстансирования для шейдера.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Фрактал"><a class="header" href="#Фрактал">Фрактал</a></h1>
+<video controls>
+  <source src="../../images/mandelbrot.mov" type="video/mp4">
+</video>
+<pre><code class="language-C++">class FractalApplication final : public mv::Application2D
+{
+private:
+    std::array&lt;char, 128&gt; imguiWindowBuffer{};
+
+    mv::Shader mandelbrotFractalShader = mv::Shader{
+        {b::embed&lt;&quot;resources/shaders/fractal/default.vert&quot;&gt;().str()},
+        {
+            b::embed&lt;&quot;resources/shaders/fractal/mandelbrot.frag&quot;&gt;().str(),
+            b::embed&lt;&quot;resources/shaders/fractal/common.glsl&quot;&gt;().str(),
+        },
+    };
+
+    // Поле где будет рисоваться фрактал
+    mv::gl::VerticesContainer&lt;glm::vec3&gt; mandelbrotVertices{
+        {2.0F, 2.0F, 0.0F}, {2.0F, -2.0F, 0.0F},  {-2.0F, -2.0F, 0.0F},
+        {2.0F, 2.0F, 0.0F}, {-2.0F, -2.0F, 0.0F}, {-2.0F, 2.0F, 0.0F},
+    };
+
+    double pressTime = 0.0;
+    ImFont *font = nullptr;
+    float fontScale = 0.5F;
+    int mandelbrotIterations = 1000;
+
+public:
+    using Application2D::Application2D;
+
+    auto init() -&gt; void override
+    {
+        Application2D::init();
+        glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+
+        mandelbrotVertices.loadData();
+        mandelbrotVertices.vbo.bind();
+        mandelbrotVertices.vao.bind(0, 3, GL_FLOAT, sizeof(glm::vec3), 0);
+
+        // снижаем чувствительность камеры
+        camera.movementSpeed = 0.5F;
+
+        ImGui::StyleColorsDark();
+        font = loadFont&lt;&quot;resources/fonts/JetBrainsMono-Medium.ttf&quot;&gt;(30.0F);
+
+        mandelbrotFractalShader.use();
+        mandelbrotFractalShader.setInt(&quot;iterations&quot;, mandelbrotIterations);
+    }
+
+    auto mandelbrotFractal() -&gt; void
+    {
+        if (ImGui::SliderInt(&quot;Iterataions&quot;, &amp;mandelbrotIterations, 5, 4000)) {
+            mandelbrotFractalShader.use();
+            mandelbrotFractalShader.setInt(&quot;iterations&quot;, mandelbrotIterations);
+        }
+
+        mandelbrotFractalShader.use();
+        mandelbrotFractalShader.setMat4(&quot;projection&quot;, getResultedViewMatrix());
+        mandelbrotVertices.vao.bind();
+
+        glDrawArrays(GL_TRIANGLES, 0, mandelbrotVertices.vertices.size());
+    }
+
+    auto update() -&gt; void override
+    {
+        fmt::format_to_n(
+            imguiWindowBuffer.data(), imguiWindowBuffer.size(),
+            &quot;Настройки. FPS: {:#.4}###SettingWindowTitle&quot;, ImGui::GetIO().Framerate);
+
+        ImGui::Begin(imguiWindowBuffer.data());
+        ImGui::PushFont(font);
+        ImGui::SetWindowFontScale(fontScale);
+
+        mandelbrotFractal();
+
+        if (ImGui::Button(&quot;Center camera&quot;)) {
+            camera.setPosition(glm::vec3(0.0F, 0.0F, 2.0F));
+        }
+
+        ImGui::SameLine();
+
+        ImGui::SliderFloat(&quot;Font scale&quot;, &amp;fontScale, 0.1F, 1.5F, &quot;%.3f&quot;);
+
+        ImGui::PopFont();
+        ImGui::End();
+    }
+
+    auto processInput() -&gt; void override
+    {
+        constexpr static auto key_press_delay = 0.2;
+
+        Application2D::processInput();
+
+        const auto left_alt_pressed = glfwGetKey(window, GLFW_KEY_LEFT_ALT) == GLFW_PRESS;
+        const auto key_g_pressed = glfwGetKey(window, GLFW_KEY_G) == GLFW_PRESS;
+
+        if (left_alt_pressed &amp;&amp; key_g_pressed) {
+            const auto mode = glfwGetInputMode(window, GLFW_CURSOR);
+            const double new_press_time = glfwGetTime();
+
+            if (new_press_time - pressTime &lt; key_press_delay) {
+                return;
+            }
+
+            pressTime = new_press_time;
+            firstMouse = true;
+            isMouseShowed = mode == GLFW_CURSOR_DISABLED;
+
+            glfwSetInputMode(
+                window, GLFW_CURSOR, isMouseShowed ? GLFW_CURSOR_NORMAL : GLFW_CURSOR_DISABLED);
+        }
+    }
+
+    // Перемещаем камеру относительно мыши
+    auto onMouseRelativeMovement(const double delta_x, const double delta_y) -&gt; void override
+    {
+        const auto scale = camera.getZoom() / 9000.0F;
+
+        camera.relativeMove(camera.getUp() * static_cast&lt;float&gt;(delta_y) * scale);
+        camera.relativeMove(camera.getRight() * static_cast&lt;float&gt;(delta_x) * scale);
+    }
+    
+    // Масштабируем скорость зума в зависимости от приближения
+    auto onScroll(const double x_offset, const double y_offset) -&gt; void override
+    {
+        const auto scale = static_cast&lt;double&gt;(camera.getZoom()) / 90.0;
+        Application2D::onScroll(x_offset * scale, y_offset * scale);
+    }
+};
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Дискретное-преобразование-Фурье"><a class="header" href="#Дискретное-преобразование-Фурье">Дискретное преобразование Фурье</a></h1>
+<video controls>
+  <source src="../../images/dft.mp4" type="video/mp4">
+</video>
+<pre><code class="language-C++">#include &lt;battery/embed.hpp&gt;
+#include &lt;complex&gt;
+#include &lt;imgui.h&gt;
+#include &lt;imgui_stdlib.h&gt;
+#include &lt;isl/linalg/linspace.hpp&gt;
+#include &lt;mv/application_2d.hpp&gt;
+#include &lt;mv/application_3d.hpp&gt;
+#include &lt;mv/gl/axes_2d.hpp&gt;
+#include &lt;mv/gl/instances_holder.hpp&gt;
+#include &lt;mv/gl/shape/plot_2d.hpp&gt;
+#include &lt;mv/gl/shape/sphere.hpp&gt;
+#include &lt;mv/gl/vertices_container.hpp&gt;
+#include &lt;mv/shader.hpp&gt;
+#include &lt;numbers&gt;
+#include &lt;valarray&gt;
+
+class DftApplication final : public mv::Application2D
+{
+private:
+    constexpr static auto windowTitleBufferSize = 128;
+
+    constexpr static std::array&lt;std::string_view, 8&gt; frequenciesNames = {
+        &quot;1 Гц&quot;, &quot;2 Гц&quot;, &quot;3 Гц&quot;, &quot;4 Гц&quot;, &quot;5 Гц&quot;, &quot;6 Гц&quot;, &quot;7 Гц&quot;, &quot;8 Гц&quot;,
+    };
+
+    std::array&lt;char, windowTitleBufferSize&gt; imguiWindowBuffer{};
+
+    mv::Shader colorShader = mv::Shader{
+        {b::embed&lt;&quot;resources/shaders/colored_shader.vert&quot;&gt;().str()},
+        {b::embed&lt;&quot;resources/shaders/fragment.frag&quot;&gt;().str()},
+    };
+
+    mv::Shader shaderWithPositioning = mv::Shader{
+        {b::embed&lt;&quot;resources/shaders/static_instance.vert&quot;&gt;().str()},
+        {b::embed&lt;&quot;resources/shaders/fragment.frag&quot;&gt;().str()},
+    };
+
+    mv::gl::shape::Axes2D plot{3};
+
+    mv::gl::shape::Plot2D resultedSignalGraph;
+    mv::gl::shape::Plot2D dftGraph;
+
+    mv::gl::shape::Sphere sphere{1.0F};
+    mv::gl::InstancesHolder&lt;mv::gl::InstanceParameters&gt; sphereInstances;
+
+    ImFont *font;
+    double pressTime = 0.0;
+    float fontScale = 0.5F;
+
+    float frequency = 2.0F;
+    float lineWidth = 0.02F;
+    float sphereRadius = 0.023F;
+
+    std::array&lt;bool, 8&gt; selectedFrequencies{false, true, false, false, false, false, false, false};
+
+    isl::u32 pointsCount = 2048 * 4;
+    isl::u32 pointsCountMin = 128;
+    isl::u32 pointsCountMax = 2048 * 16;
+    isl::u32 pointsDrawDivider = 32;
+    isl::u32 pointsDrawDividerMin = 1;
+    isl::u32 pointsDrawDividerMax = 128;
+
+    std::valarray&lt;float&gt; xLinearSpace = isl::linalg::linspace&lt;float&gt;(0, 10, pointsCount);
+    std::valarray&lt;float&gt; signalLinearSpace = std::valarray&lt;float&gt;(xLinearSpace.size());
+
+public:
+    using Application2D::Application2D;
+
+    auto init() -&gt; void override
+    {
+        Application2D::init();
+        glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+
+        plot.loadData();
+        plot.vbo.bind();
+        plot.vao.bind(0, 3, GL_FLOAT, sizeof(glm::vec3), 0);
+
+        resultedSignalGraph.loadData();
+        resultedSignalGraph.vbo.bind();
+        resultedSignalGraph.vao.bind(0, 3, GL_FLOAT, sizeof(glm::vec3), 0);
+
+        dftGraph.loadData();
+        dftGraph.vbo.bind();
+        dftGraph.vao.bind(0, 3, GL_FLOAT, sizeof(glm::vec3), 0);
+
+        sphere.vbo.bind();
+        sphere.vao.bind(0, 3, GL_FLOAT, sizeof(glm::vec3), 0);
+
+        sphereInstances.vbo.bind();
+        sphere.vao.bindInstanceParameters(1, 1);
+
+        ImGui::StyleColorsLight();
+        font = loadFont&lt;&quot;resources/fonts/JetBrainsMono-Medium.ttf&quot;&gt;(30.0F);
+
+        setClearColor({0.8F, 0.8F, 0.8F, 1.0F});
+
+        calculateSignal();
+        calculateDft();
+    }
+
+    auto calculateSignal() -&gt; void
+    {
+        signalLinearSpace = std::valarray&lt;float&gt;(xLinearSpace.size());
+
+        for (size_t i = 0; i != selectedFrequencies.size(); ++i) {
+            if (selectedFrequencies.at(i)) {
+                const auto freq = static_cast&lt;float&gt;(i + 1);
+
+                for (std::size_t j = 0; j != xLinearSpace.size(); ++j) {
+                    signalLinearSpace[j] +=
+                        std::sin(2.0F * std::numbers::pi_v&lt;float&gt; * freq * xLinearSpace[j]) + 1;
+                }
+            }
+        }
+
+        resultedSignalGraph.fill(xLinearSpace, signalLinearSpace, 0.015F);
+        resultedSignalGraph.loadData();
+    }
+
+    auto calculateDft() -&gt; void
+    {
+        sphereInstances.models.clear();
+
+        auto x2 = std::valarray&lt;float&gt;(xLinearSpace.size());
+        auto y2 = std::valarray&lt;float&gt;(xLinearSpace.size());
+        std::complex&lt;float&gt; center_of_mass{};
+
+        for (std::size_t i = 0; i != xLinearSpace.size(); ++i) {
+            auto point =
+                signalLinearSpace[i] * std::exp(
+                                           std::complex(0.0F, 2.0F) * std::numbers::pi_v&lt;float&gt; *
+                                           frequency * xLinearSpace[i]);
+
+            center_of_mass += point;
+            x2[i] = point.imag();
+            y2[i] = point.real();
+        }
+
+        center_of_mass /= static_cast&lt;float&gt;(xLinearSpace.size());
+
+        for (std::size_t i = 0; i &lt; x2.size(); i += pointsDrawDivider) {
+            sphereInstances.models.emplace_back(
+                glm::vec4{0.1F, 0.8F, 0.1F, 1.0F},
+                glm::scale(
+                    glm::translate(
+                        glm::mat4(1.0F),
+                        {
+                            x2[i],
+                            y2[i],
+                            0.01F,
+                        }),
+                    glm::vec3{sphereRadius}));
+        }
+
+        dftGraph.fill(x2, y2, lineWidth);
+
+        sphereInstances.models.emplace_back(
+            glm::vec4{0.0F, 0.0F, 1.0F, 1.0F},
+            glm::scale(
+                glm::translate(
+                    glm::mat4(1.0F),
+                    {
+                        center_of_mass.imag(),
+                        center_of_mass.real(),
+                        0.01F,
+                    }),
+                glm::vec3{2.5F * sphereRadius}));
+
+        sphereInstances.loadData();
+        dftGraph.loadData();
+    }
+
+    auto update() -&gt; void override
+    {
+        fmt::format_to_n(
+            imguiWindowBuffer.data(), imguiWindowBuffer.size(),
+            &quot;Настройки. FPS: {:#.4}###SettingWindowTitle&quot;, ImGui::GetIO().Framerate);
+
+        ImGui::Begin(imguiWindowBuffer.data());
+        ImGui::PushFont(font);
+        ImGui::SetWindowFontScale(fontScale);
+
+        colorShader.use();
+        colorShader.setMat4(&quot;projection&quot;, getResultedViewMatrix());
+        colorShader.setMat4(
+            &quot;model&quot;, glm::translate(glm::mat4(1.0F), glm::vec3{0.0F, 0.0F, -0.01F}));
+        colorShader.setVec4(&quot;elementColor&quot;, glm::vec4(0.0F, 0.0F, 0.0F, 1.0F));
+
+        plot.draw();
+
+        colorShader.setMat4(&quot;model&quot;, glm::mat4(1.0F));
+        colorShader.setVec4(&quot;elementColor&quot;, glm::vec4(1.0F, 0.301F, 0.0F, 1.0F));
+        dftGraph.draw();
+
+        shaderWithPositioning.use();
+        shaderWithPositioning.setMat4(&quot;projection&quot;, getResultedViewMatrix());
+
+        sphere.vao.bind();
+
+        glDrawArraysInstanced(
+            GL_TRIANGLE_STRIP, 0, sphere.vertices.size(), sphereInstances.models.size());
+
+        if (ImGui::Button(&quot;Center camera&quot;)) {
+            camera.setPosition(glm::vec3(0.0F, 0.0F, 2.0F));
+        }
+
+        if (ImGui::SliderFloat(
+                &quot;Frequency&quot;, &amp;frequency, 1.0F,
+                static_cast&lt;float&gt;(selectedFrequencies.size()) + 1.0F)) {
+            calculateDft();
+        }
+
+        for (size_t i = 0; i != selectedFrequencies.size(); ++i) {
+            if (ImGui::Checkbox(frequenciesNames[i].data(), &amp;selectedFrequencies[i])) {
+                calculateSignal();
+                calculateDft();
+            }
+
+            if (i + 1 != selectedFrequencies.size() / 2 &amp;&amp; i != selectedFrequencies.size() - 1) {
+                ImGui::SameLine();
+            }
+        }
+
+        if (ImGui::SliderFloat(&quot;Line width&quot;, &amp;lineWidth, 0.01F, 0.1F)) {
+            calculateDft();
+        }
+
+        if (ImGui::SliderFloat(&quot;Sphere radius&quot;, &amp;sphereRadius, 0.01F, 0.1F)) {
+            calculateDft();
+        }
+
+        if (ImGui::SliderScalar(
+                &quot;Points count&quot;, ImGuiDataType_U32, &amp;pointsCount, &amp;pointsCountMin, &amp;pointsCountMax,
+                &quot;%u&quot;)) {
+            xLinearSpace = isl::linalg::linspace&lt;float&gt;(0, 10, pointsCount);
+            calculateSignal();
+            calculateDft();
+        }
+
+        if (ImGui::SliderScalar(
+                &quot;Sphere draw divider&quot;, ImGuiDataType_U32, &amp;pointsDrawDivider, &amp;pointsDrawDividerMin,
+                &amp;pointsDrawDividerMax, &quot;%u&quot;)) {
+            calculateDft();
+        }
+
+        ImGui::SliderFloat(&quot;Font scale&quot;, &amp;fontScale, 0.1F, 1.5F, &quot;%.3f&quot;);
+
+        ImGui::PopFont();
+        ImGui::End();
+    }
+
+    auto processInput() -&gt; void override
+    {
+        constexpr static auto key_press_delay = 0.2;
+
+        Application2D::processInput();
+
+        const auto left_alt_pressed = glfwGetKey(window, GLFW_KEY_LEFT_ALT) == GLFW_PRESS;
+        const auto key_g_pressed = glfwGetKey(window, GLFW_KEY_G) == GLFW_PRESS;
+
+        if (left_alt_pressed &amp;&amp; key_g_pressed) {
+            const auto mode = glfwGetInputMode(window, GLFW_CURSOR);
+            const double new_press_time = glfwGetTime();
+
+            if (new_press_time - pressTime &lt; key_press_delay) {
+                return;
+            }
+
+            pressTime = new_press_time;
+            firstMouse = true;
+            isMouseShowed = mode == GLFW_CURSOR_DISABLED;
+
+            glfwSetInputMode(
+                window, GLFW_CURSOR, isMouseShowed ? GLFW_CURSOR_NORMAL : GLFW_CURSOR_DISABLED);
+        }
+    }
+
+    auto onMouseRelativeMovement(const double delta_x, const double delta_y) -&gt; void override
+    {
+        const auto scale = camera.getZoom() / 9000.0F;
+
+        camera.relativeMove(camera.getUp() * static_cast&lt;float&gt;(delta_y) * scale);
+        camera.relativeMove(camera.getRight() * static_cast&lt;float&gt;(delta_x) * scale);
+    }
+
+    auto onScroll(const double x_offset, const double y_offset) -&gt; void override
+    {
+        const auto scale = static_cast&lt;double&gt;(camera.getZoom()) / 180.0;
+        Application2D::onScroll(x_offset * scale, y_offset * scale);
+    }
+};
+
+auto main() -&gt; int
+{
+    DftApplication application{1000, 800, &quot;Dft&quot;, 2};
+    application.run();
+    return 0;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Отрисовка-пользовательской-функции-в-3d"><a class="header" href="#Отрисовка-пользовательской-функции-в-3d">Отрисовка пользовательской функции в 3D</a></h1>
+<h2 id="Описание-16"><a class="header" href="#Описание-16">Описание</a></h2>
+<p>Создается приложение, в котором пользователь может вводить функцию на языке <code>ast-lang-2</code> и отрисовывать ее график в 3D.</p>
+<p><img src="math-visualizer/examples/../../images/function-3d.png" alt="Пример работы" /></p>
+<h2 id="Код"><a class="header" href="#Код">Код</a></h2>
+<pre><code class="language-C++">#include &lt;ast-lang-2/interpreter/interpreter.hpp&gt;
+#include &lt;battery/embed.hpp&gt;
+#include &lt;ccl/runtime.hpp&gt;
+#include &lt;imgui.h&gt;
+#include &lt;imgui_stdlib.h&gt;
+#include &lt;mv/application_3d.hpp&gt;
+#include &lt;mv/gl/axes_3d.hpp&gt;
+#include &lt;mv/gl/instance_parameters.hpp&gt;
+#include &lt;mv/gl/instances_holder.hpp&gt;
+#include &lt;mv/gl/shape/function_3d.hpp&gt;
+#include &lt;mv/gl/shape/sphere.hpp&gt;
+#include &lt;mv/shader.hpp&gt;
+#include &lt;mvl/mvl.hpp&gt;
+
+class FunctionVisualizer3DApplication final : public mv::Application3D
+{
+private:
+    std::array&lt;char, 128&gt; imguiWindowBuffer{};
+
+    mv::Shader colorShader = mv::Shader{
+        {b::embed&lt;&quot;resources/shaders/colored_shader.vert&quot;&gt;().str()},
+        {b::embed&lt;&quot;resources/shaders/fragment.frag&quot;&gt;().str()},
+    };
+
+    mv::gl::shape::Axes3D axes3D{12};
+    mv::gl::shape::Function3D function;
+
+    double pressTime = 0.0;
+    float evaluationTimeNs = 0.0;
+    float fontScale = 0.33F;
+    ImFont *font = nullptr;
+
+    std::string sourceCode = R&quot;(
+def f(vec2 a) {
+    return a.x * a.x + a.y * a.y;
+}
+)&quot;;
+    std::string programOutput = &quot;&quot;;
+    bool disableInput = false;
+
+public:
+    using Application3D::Application3D;
+
+    auto init() -&gt; void override
+    {
+        Application3D::init();
+
+        setClearColor({0.8F, 0.8F, 0.8F, 1.0F});
+        glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+
+        function.loadData();
+        axes3D.loadData();
+
+        function.vbo.bind();
+        function.vao.bind(0, 3, GL_FLOAT, sizeof(glm::vec3), 0);
+
+        axes3D.vbo.bind();
+        axes3D.vao.bind(0, 3, GL_FLOAT, sizeof(glm::vec3), 0);
+
+        colorShader.use();
+        colorShader.setMat4(&quot;model&quot;, glm::mat4(1.0f));
+        colorShader.setVec4(&quot;elementColor&quot;, glm::vec4(0.5f, 0.5f, 0.0f, 1.0f));
+
+        ImGui::StyleColorsLight();
+        font = loadFont&lt;&quot;resources/fonts/JetBrainsMono-Medium.ttf&quot;&gt;(45.0F);
+
+        camera.setPosition(glm::vec3(0.0F, 12.0F, 10.0F));
+    }
+
+    auto update() -&gt; void override
+    {
+        fmt::format_to_n(
+            imguiWindowBuffer.data(), imguiWindowBuffer.size(),
+            &quot;Settings. FPS: {:#.4}###SettingWindowTitle&quot;, ImGui::GetIO().Framerate);
+
+        ImGui::Begin(imguiWindowBuffer.data());
+        ImGui::PushFont(font);
+        ImGui::SetWindowFontScale(fontScale);
+
+        ImGui::SliderFloat(&quot;Font scale&quot;, &amp;fontScale, 0.1F, 3.0F, &quot;%.3f&quot;);
+        ImGui::InputTextMultiline(&quot;##Program input&quot;, &amp;sourceCode);
+
+        if (ImGui::Button(&quot;run&quot;)) {
+            tryToDrawFunctionWithUserFunction();
+        }
+
+        disableInput = ImGui::IsWindowFocused();
+        ImGui::TextUnformatted(programOutput.c_str(), programOutput.c_str() + programOutput.size());
+
+        const glm::mat4 resulted_matrix = getResultedViewMatrix();
+
+        colorShader.use();
+        colorShader.setVec4(&quot;elementColor&quot;, glm::vec4(0.5f, 0.5f, 0.0f, 1.0f));
+        colorShader.setMat4(&quot;projection&quot;, resulted_matrix);
+
+        function.draw();
+
+        colorShader.setVec4(&quot;elementColor&quot;, glm::vec4(0.1f, 0.1f, 0.1f, 1.0f));
+        axes3D.draw();
+
+        ImGui::PopFont();
+        ImGui::End();
+    }
+
+    auto tryToDrawFunctionWithUserFunction() -&gt; void
+    {
+        try {
+            ccl::runtime::async(calculateFunctionPoints()).await();
+        } catch (const std::exception &amp;e) {
+            programOutput = e.what();
+        }
+    }
+
+    auto calculateFunctionPoints() -&gt; isl::Task&lt;&gt;
+    {
+        auto node = ccl::runtime::async(mvl::parse(sourceCode, &quot;stdin&quot;));
+        programOutput.clear();
+
+        auto interpreter = mvl::newInterpreter(std::back_inserter(programOutput));
+        (co_await node)-&gt;compute(interpreter);
+
+        const auto *user_function = interpreter.getFunction(
+            astlang2::function::FunctionIdentification{
+                .name = &quot;f&quot;,
+                .arguments = isl::SmallVector&lt;astlang2::ts::Type *, 4&gt;{interpreter.getVec2()},
+                .returnType = interpreter.getDouble()});
+
+        const auto *vec2_constructor = interpreter.getFunction(
+            astlang2::function::FunctionIdentification{
+                .name = &quot;vec2&quot;,
+                .arguments =
+                    isl::SmallVector&lt;astlang2::ts::Type *, 4&gt;{
+                        interpreter.getDouble(), interpreter.getDouble()},
+                .returnType = interpreter.getVec2()});
+
+        const std::function function_invoker = [&amp;user_function, &amp;interpreter,
+                                                vec2_constructor](glm::vec2 vec) {
+            auto vec2 = vec2_constructor-&gt;call(
+                interpreter, {astlang2::Value{
+                                  .object = astlang2::AstlangObject&lt;double&gt;(vec.x),
+                                  .type = interpreter.getDouble()},
+                              astlang2::Value{
+                                  .object = astlang2::AstlangObject&lt;double&gt;(vec.y),
+                                  .type = interpreter.getDouble()}});
+
+            const auto result = user_function-&gt;call(interpreter, {vec2});
+            return static_cast&lt;float&gt;(*static_cast&lt;double *&gt;(result.object.get()));
+        };
+
+        const auto begin = std::chrono::high_resolution_clock::now();
+
+        this-&gt;function.evaluatePoints(
+            function_invoker, -10.0F, -10.0F, -15.0F, 10.0F, 10.0F, 15.0F);
+
+        const auto end = std::chrono::high_resolution_clock::now();
+
+        this-&gt;function.loadData();
+
+        fmt::println(&quot;{}us&quot;, (end - begin) / std::chrono::microseconds(1));
+
+        co_return;
+    }
+
+    auto processInput() -&gt; void override
+    {
+        constexpr static auto key_press_delay = 0.2;
+
+        if (!disableInput) {
+            Application3D::processInput();
+        }
+
+        const auto left_alt_pressed = glfwGetKey(window, GLFW_KEY_LEFT_ALT) == GLFW_PRESS;
+        const auto key_g_pressed = glfwGetKey(window, GLFW_KEY_G) == GLFW_PRESS;
+
+        if (left_alt_pressed &amp;&amp; key_g_pressed) {
+            const auto mode = glfwGetInputMode(window, GLFW_CURSOR);
+            const double new_press_time = glfwGetTime();
+
+            if (new_press_time - pressTime &lt; key_press_delay) {
+                return;
+            }
+
+            pressTime = new_press_time;
+            firstMouse = true;
+            isMouseShowed = mode == GLFW_CURSOR_DISABLED;
+
+            glfwSetInputMode(
+                window, GLFW_CURSOR, isMouseShowed ? GLFW_CURSOR_NORMAL : GLFW_CURSOR_DISABLED);
+        }
+    }
+};
+
+auto main() -&gt; int
+{
+    FunctionVisualizer3DApplication application{1000, 800, &quot;Function visualizer&quot;, 16};
+    application.run();
+    return 0;
+}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="ace.js"></script>
+        <script src="editor.js"></script>
+        <script src="mode-rust.js"></script>
+        <script src="theme-dawn.js"></script>
+        <script src="theme-tomorrow_night.js"></script>
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
