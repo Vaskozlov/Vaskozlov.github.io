@@ -4,7 +4,7 @@
 Базовый класс OpenGl приложение с интеграцией ImGUI.
 
 ## Методы класса
-<code class="language-C++">Application(int width, int height, std::string window_title, int multisampling_level = 4)</code> – создает окно приложения с заданными параметрами и производит инициализацию OpenGL, GLFW, ImGUI.
+<code class="language-C++">Application(int width, int height, std::string window_title, int multisampling_level)</code> – создает окно приложения с заданными параметрами и производит инициализацию OpenGL, GLFW, ImGUI.
 
 <code class="language-C++">virtual ~Application()</code>
 
