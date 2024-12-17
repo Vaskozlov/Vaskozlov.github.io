@@ -39,3 +39,4 @@
   - [Math Visualizer Examples]()
       - [Fractal](math-visualizer/examples/fractal.md)
       - [Dft](math-visualizer/examples/dft.md)
+      - [Function3D](math-visualizer/examples/function-3d.md)
