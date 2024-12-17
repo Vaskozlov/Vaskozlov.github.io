@@ -23,7 +23,7 @@
 #include <mv/shader.hpp>
 #include <mvl/mvl.hpp>
 
-class FunctionGradientApplication final : public mv::Application3D
+class FunctionVisualizer3DApplication final : public mv::Application3D
 {
 private:
     std::array<char, 128> imguiWindowBuffer{};
@@ -34,12 +34,9 @@ private:
     };
 
     mv::gl::shape::Axes3D axes3D{12};
-    mv::gl::InstancesHolder<mv::gl::InstanceParameters> instancing;
     mv::gl::shape::Function3D function;
 
     double pressTime = 0.0;
-    float gradientA = 0.03F;
-    float gradientK = 1.0F;
     float evaluationTimeNs = 0.0;
     float fontScale = 0.33F;
     ImFont *font = nullptr;
@@ -60,12 +57,6 @@ public:
         Application3D::init();
 
         setClearColor({0.8F, 0.8F, 0.8F, 1.0F});
-
-        instancing.models = {mv::gl::InstanceParameters{
-            .color = {1.0F, 0.0F, 0.0F, 1.0F},
-            .transformation = glm::translate(glm::mat4{1.0F}, {2.5F, 2.0F, 8.0F}),
-        }};
-
         glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
         function.loadData();
@@ -212,7 +203,7 @@ public:
 
 auto main() -> int
 {
-    FunctionGradientApplication application{1000, 800, "Function Gradient", 16};
+    FunctionVisualizer3DApplication application{1000, 800, "Function visualizer", 16};
     application.run();
     return 0;
 }
