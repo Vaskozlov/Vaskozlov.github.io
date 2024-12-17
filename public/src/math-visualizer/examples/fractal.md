@@ -1,5 +1,9 @@
 # Фрактал
 
+<video controls>
+  <source src="../../images/mandelbrot.mov" type="video/mp4">
+</video>
+
 ```C++
 class FractalApplication final : public mv::Application2D
 {
@@ -129,4 +133,3 @@ public:
 };
 ```
 
-![](../../images/mandelbrot.png)
